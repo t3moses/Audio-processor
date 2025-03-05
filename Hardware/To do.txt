@@ -1,0 +1,10 @@
+Check op amp input current
+Check zener current
+Choose zener resistor value
+
+Check RC cut-off frequency
+
+Check if voltage reguator should have capacitors
+Check voltage greulator max input voltage
+Calculate power dissipation in voltage regulator
+
