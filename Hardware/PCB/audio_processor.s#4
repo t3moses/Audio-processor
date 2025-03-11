@@ -5468,7 +5468,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="LCSC" value="C17674"/>
+<attribute name="LCSC" value="C26091"/>
 </part>
 <part name="J3" library="TMS-101-51-G-D" deviceset="TMS-101-51-G-D" device=""/>
 <part name="J4" library="MTMM-101-X-X-S-X" deviceset="MTMM-101-X-X-S-X" device=""/>
@@ -5491,7 +5491,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="LCSC" value="C17514"/>
+<attribute name="LCSC" value="C26083"/>
 </part>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1M">
 <spice>
@@ -5500,7 +5500,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="LCSC" value="C17514"/>
+<attribute name="LCSC" value="C26083"/>
 </part>
 <part name="C1" library="WCAP-CSGP_0402" deviceset="WCAP-CSGP_0402" device="_50V(DC)">
 <attribute name="LCSC" value="C1581"/>

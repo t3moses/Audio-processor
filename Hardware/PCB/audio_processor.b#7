@@ -147,7 +147,7 @@
 <wire x1="98.5" y1="32.8" x2="-1.5" y2="32.8" width="0" layer="20"/>
 <wire x1="-1.5" y1="32.8" x2="0" y2="0" width="0" layer="20"/>
 <text x="0.95" y="15.05" size="1.778" layer="25" rot="R270">IN</text>
-<text x="98.35" y="11.35" size="1.778" layer="25" rot="R90">OUT</text>
+<text x="97.5" y="11.45" size="1.778" layer="25" rot="R90">OUT</text>
 <text x="26.65" y="28.242" size="1.778" layer="25">T</text>
 <text x="48.07155625" y="23.8" size="1.778" layer="25">0V</text>
 <text x="53.38063125" y="23.8" size="1.778" layer="25">2V5</text>
