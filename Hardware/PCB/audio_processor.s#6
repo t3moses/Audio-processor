@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5453,7 +5453,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
-<class number="1" name="Power" width="0.2" drill="0">
+<class number="1" name="Power" width="0.5" drill="0">
 </class>
 </classes>
 <parts>
@@ -5468,7 +5468,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="LCSC" value="C17674"/>
+<attribute name="LCSC" value="C26091"/>
 </part>
 <part name="J3" library="TMS-101-51-G-D" deviceset="TMS-101-51-G-D" device=""/>
 <part name="J4" library="MTMM-101-X-X-S-X" deviceset="MTMM-101-X-X-S-X" device=""/>
@@ -5491,7 +5491,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="LCSC" value="C17514"/>
+<attribute name="LCSC" value="C26083"/>
 </part>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1M">
 <spice>
@@ -5500,7 +5500,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="LCSC" value="C17514"/>
+<attribute name="LCSC" value="C26083"/>
 </part>
 <part name="C1" library="WCAP-CSGP_0402" deviceset="WCAP-CSGP_0402" device="_50V(DC)">
 <attribute name="LCSC" value="C1581"/>

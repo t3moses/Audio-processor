@@ -12680,9 +12680,9 @@ Soure: &lt;a href="http://www.ti.com/lit/ds/symlink/ads7042.pdf"&gt; Data sheet 
 <attribute name="NAME" x="243.84" y="178.8" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="243.84" y="143.32" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="U$2" gate="G$1" x="190.5" y="165.1" smashed="yes">
-<attribute name="NAME" x="168.91" y="180.34" size="1.27" layer="95" ratio="12"/>
-<attribute name="VALUE" x="168.91" y="179.07" size="1.27" layer="96" ratio="12"/>
+<instance part="U$2" gate="G$1" x="190.5" y="170.18" smashed="yes">
+<attribute name="NAME" x="168.91" y="185.42" size="1.27" layer="95" ratio="12"/>
+<attribute name="VALUE" x="168.91" y="184.15" size="1.27" layer="96" ratio="12"/>
 </instance>
 <instance part="U2" gate="A" x="88.9" y="182.88" smashed="yes">
 <attribute name="NAME" x="76.2" y="196.58" size="2.0828" layer="95" ratio="10" rot="SR0"/>
@@ -12977,17 +12977,16 @@ Soure: &lt;a href="http://www.ti.com/lit/ds/symlink/ads7042.pdf"&gt; Data sheet 
 <pinref part="IC1" gate="G$1" pin="SCLK"/>
 <pinref part="IC2" gate="G$1" pin="SCLK"/>
 <wire x1="139.7" y1="185.42" x2="152.4" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="185.42" x2="152.4" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="157.48" x2="152.4" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="185.42" x2="152.4" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="142.24" x2="139.7" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="PA9_A5_D5_SCL"/>
-<wire x1="165.1" y1="157.48" x2="152.4" y2="157.48" width="0.1524" layer="91"/>
-<junction x="152.4" y="157.48"/>
 <pinref part="U$1" gate="A" pin="SCK"/>
 <wire x1="238.76" y1="162.56" x2="233.68" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="162.56" x2="233.68" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="142.24" x2="152.4" y2="142.24" width="0.1524" layer="91"/>
 <junction x="152.4" y="142.24"/>
+<pinref part="U$2" gate="G$1" pin="PA7_A8_D8_SCK"/>
+<wire x1="214.63" y1="162.56" x2="233.68" y2="162.56" width="0.1524" layer="91"/>
+<junction x="233.68" y="162.56"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -13008,46 +13007,59 @@ Soure: &lt;a href="http://www.ti.com/lit/ds/symlink/ads7042.pdf"&gt; Data sheet 
 <segment>
 <pinref part="IC2" gate="G$1" pin="SDO"/>
 <wire x1="139.7" y1="187.96" x2="154.94" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="187.96" x2="154.94" y2="161.29" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="SDO"/>
-<wire x1="154.94" y1="161.29" x2="154.94" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="187.96" x2="154.94" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="144.78" x2="139.7" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="PA8_A4_D4_SDA"/>
-<wire x1="165.1" y1="161.29" x2="154.94" y2="161.29" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="A" pin="SDI"/>
 <wire x1="238.76" y1="160.02" x2="236.22" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="160.02" x2="236.22" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="144.78" x2="154.94" y2="144.78" width="0.1524" layer="91"/>
 <junction x="154.94" y="144.78"/>
+<wire x1="236.22" y1="160.02" x2="223.52" y2="160.02" width="0.1524" layer="91"/>
+<junction x="236.22" y="160.02"/>
+<wire x1="223.52" y1="160.02" x2="223.52" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="PA5_A9_D9_MISO"/>
+<wire x1="223.52" y1="165.1" x2="214.63" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="214.63" y1="165.1" x2="214.63" y2="166.37" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="!SC"/>
 <wire x1="139.7" y1="139.7" x2="149.86" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="PA11_A3_D3"/>
-<wire x1="149.86" y1="139.7" x2="149.86" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="165.1" x2="165.1" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="139.7" x2="149.86" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="PA4_A1_D1"/>
+<wire x1="165.1" y1="177.8" x2="149.86" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$26" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="!SC"/>
-<wire x1="139.7" y1="182.88" x2="149.86" y2="182.88" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="PA10_A2_D2"/>
-<wire x1="149.86" y1="182.88" x2="149.86" y2="168.91" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="168.91" x2="165.1" y2="168.91" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="PA02_A0_D0"/>
+<wire x1="139.7" y1="182.88" x2="165.1" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="182.88" x2="165.1" y2="181.61" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
 <segment>
 <pinref part="U$1" gate="A" pin="!CS"/>
-<wire x1="238.76" y1="170.18" x2="231.14" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="170.18" x2="231.14" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="147.32" x2="157.48" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="147.32" x2="157.48" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="PA4_A1_D1"/>
-<wire x1="157.48" y1="172.72" x2="165.1" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="170.18" x2="228.6" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="170.18" x2="228.6" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="147.32" x2="157.48" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="PA10_A2_D2"/>
+<wire x1="165.1" y1="173.99" x2="157.48" y2="173.99" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="173.99" x2="157.48" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="U$1" gate="A" pin="!LDAC"/>
+<wire x1="238.76" y1="167.64" x2="231.14" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="167.64" x2="231.14" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="149.86" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="PA11_A3_D3"/>
+<wire x1="165.1" y1="170.18" x2="160.02" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="170.18" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

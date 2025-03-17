@@ -143,22 +143,22 @@
 <board>
 <plain>
 <wire x1="0" y1="0" x2="100" y2="0" width="0" layer="20"/>
-<wire x1="100" y1="0" x2="100" y2="80" width="0" layer="20"/>
-<wire x1="100" y1="80" x2="0" y2="80" width="0" layer="20"/>
-<wire x1="0" y1="80" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="100" y1="0" x2="98.5" y2="32.8" width="0" layer="20"/>
+<wire x1="98.5" y1="32.8" x2="-1.5" y2="32.8" width="0" layer="20"/>
+<wire x1="-1.5" y1="32.8" x2="0" y2="0" width="0" layer="20"/>
 <text x="0.95" y="15.05" size="1.778" layer="25" rot="R270">IN</text>
-<text x="98.35" y="11.35" size="1.778" layer="25" rot="R90">OUT</text>
-<text x="26.65" y="28.45" size="1.778" layer="25">T</text>
-<text x="47.9" y="26" size="1.778" layer="25">0V</text>
-<text x="52.5" y="26" size="1.778" layer="25">2V5</text>
-<text x="59.5" y="25.5" size="1.778" layer="25">5V</text>
-<text x="70.75" y="29.1" size="1.778" layer="25">Phtm</text>
-<text x="41.4" y="25.95" size="1.778" layer="25">XLR</text>
-<text x="37.1" y="25.8" size="1.778" layer="25">R</text>
-<text x="50.7" y="17.5" size="1.778" layer="25">R</text>
-<text x="50.7" y="20" size="1.778" layer="25">T</text>
-<text x="54.4" y="14.35" size="1.778" layer="25">5V</text>
-<text x="52.5" y="11.55" size="1.778" layer="25">XLR</text>
+<text x="97.5" y="11.45" size="1.778" layer="25" rot="R90">OUT</text>
+<text x="26.65" y="28.242" size="1.778" layer="25">T</text>
+<text x="48.07155625" y="23.8" size="1.778" layer="25">0V</text>
+<text x="53.38063125" y="23.8" size="1.778" layer="25">2V5</text>
+<text x="60.09999375" y="23.8" size="1.778" layer="25">5V</text>
+<text x="70.75" y="28.242" size="1.778" layer="25">Phtm</text>
+<text x="40.932675" y="23.8" size="1.778" layer="25">XLR</text>
+<text x="36.9" y="23.8" size="1.778" layer="25">R</text>
+<text x="50.6264" y="17.13333125" size="1.778" layer="25">R</text>
+<text x="50.912028125" y="19.999996875" size="1.778" layer="25">T</text>
+<text x="49.35" y="11.4" size="1.778" layer="25">5V</text>
+<text x="47.52019375" y="14.266665625" size="1.778" layer="25">XLR</text>
 </plain>
 <libraries>
 <library name="Net_bridge">
@@ -1481,7 +1481,7 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
-<class number="1" name="Power" width="0.2" drill="0">
+<class number="1" name="Power" width="0.5" drill="0">
 </class>
 </classes>
 <designrules name="default">
@@ -1668,54 +1668,54 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="B1" library="Net_bridge" package="NET_BRIDGE" package3d_urn="urn:adsk.eagle:package:39213142/1" value="NET_BRIDGE" x="47.35" y="9.65" smashed="yes" rot="R270"/>
-<element name="C1" library="WCAP-CSGP_0402" package="WCAP-CSGP_0402" value="WCAP-CSGP_0402_50V(DC)" x="37.03" y="17.4" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="76.4" y="-58.8" size="1.778" layer="27" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=eda" x="76.4" y="-58.8" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      WCAP-CSGP General Purpose MLCC; SMT 0402; X5R; 100nF  20%; 10V; -55C to +85C; Tech. PN X5R0402104M010DFCT10000                                              " x="76.4" y="-58.8" size="1.778" layer="27" display="off"/>
-<attribute name="LCSC" value="C1581" x="76.4" y="-58.8" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Würth Elektronik" x="76.4" y="-58.8" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="885012105010" x="76.4" y="-58.8" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="47.08" y="-5.9" size="0.3048" layer="25" align="bottom-center"/>
-<attribute name="PACKAGE" value="0402 Wurth Electronics" x="76.4" y="-58.8" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="76.4" y="-58.8" size="1.778" layer="27" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=snap" x="76.4" y="-58.8" size="1.778" layer="27" display="off"/>
+<element name="B1" library="Net_bridge" package="NET_BRIDGE" package3d_urn="urn:adsk.eagle:package:39213142/1" value="NET_BRIDGE" x="61.0825" y="9.75" smashed="yes" rot="R180"/>
+<element name="C1" library="WCAP-CSGP_0402" package="WCAP-CSGP_0402" value="WCAP-CSGP_0402_50V(DC)" x="36.955" y="17.3558" smashed="yes">
+<attribute name="AVAILABILITY" value="In Stock" x="76.325" y="-58.8442" size="1.778" layer="27" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=eda" x="76.325" y="-58.8442" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      WCAP-CSGP General Purpose MLCC; SMT 0402; X5R; 100nF  20%; 10V; -55C to +85C; Tech. PN X5R0402104M010DFCT10000                                              " x="76.325" y="-58.8442" size="1.778" layer="27" display="off"/>
+<attribute name="LCSC" value="C1581" x="76.325" y="-58.8442" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Würth Elektronik" x="76.325" y="-58.8442" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="885012105010" x="76.325" y="-58.8442" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="47.005" y="-5.9442" size="0.3048" layer="25" align="bottom-center"/>
+<attribute name="PACKAGE" value="0402 Wurth Electronics" x="76.325" y="-58.8442" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="None" x="76.325" y="-58.8442" size="1.778" layer="27" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=snap" x="76.325" y="-58.8442" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C2" library="WCAP-CSGP_0402" package="WCAP-CSGP_0402" value="WCAP-CSGP_0402_50V(DC)" x="36.88" y="19.45" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="82.6" y="-56.75" size="1.778" layer="27" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=eda" x="82.6" y="-56.75" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      WCAP-CSGP General Purpose MLCC; SMT 0402; X5R; 100nF  20%; 10V; -55C to +85C; Tech. PN X5R0402104M010DFCT10000                                              " x="82.6" y="-56.75" size="1.778" layer="27" display="off"/>
-<attribute name="LCSC" value="C1581" x="82.6" y="-56.75" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Würth Elektronik" x="82.6" y="-56.75" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="885012105010" x="82.6" y="-56.75" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="36.83" y="20.1" size="0.3048" layer="25" align="bottom-center"/>
-<attribute name="PACKAGE" value="0402 Wurth Electronics" x="82.6" y="-56.75" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="82.6" y="-56.75" size="1.778" layer="27" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=snap" x="82.6" y="-56.75" size="1.778" layer="27" display="off"/>
+<element name="C2" library="WCAP-CSGP_0402" package="WCAP-CSGP_0402" value="WCAP-CSGP_0402_50V(DC)" x="36.955" y="19.5392" smashed="yes">
+<attribute name="AVAILABILITY" value="In Stock" x="82.675" y="-56.6608" size="1.778" layer="27" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=eda" x="82.675" y="-56.6608" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      WCAP-CSGP General Purpose MLCC; SMT 0402; X5R; 100nF  20%; 10V; -55C to +85C; Tech. PN X5R0402104M010DFCT10000                                              " x="82.675" y="-56.6608" size="1.778" layer="27" display="off"/>
+<attribute name="LCSC" value="C1581" x="82.675" y="-56.6608" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Würth Elektronik" x="82.675" y="-56.6608" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="885012105010" x="82.675" y="-56.6608" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="36.905" y="20.1892" size="0.3048" layer="25" align="bottom-center"/>
+<attribute name="PACKAGE" value="0402 Wurth Electronics" x="82.675" y="-56.6608" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="None" x="82.675" y="-56.6608" size="1.778" layer="27" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=snap" x="82.675" y="-56.6608" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C3" library="WCAP-CSGP_0402" package="WCAP-CSGP_0402" value="WCAP-CSGP_0402_50V(DC)" x="61.78" y="20.6" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="113.85" y="-55.6" size="1.778" layer="27" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=eda" x="113.85" y="-55.6" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      WCAP-CSGP General Purpose MLCC; SMT 0402; X5R; 100nF  20%; 10V; -55C to +85C; Tech. PN X5R0402104M010DFCT10000                                              " x="113.85" y="-55.6" size="1.778" layer="27" display="off"/>
-<attribute name="LCSC" value="C1581" x="113.85" y="-55.6" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Würth Elektronik" x="113.85" y="-55.6" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="885012105010" x="113.85" y="-55.6" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="61.73" y="21.25" size="0.3048" layer="25" align="bottom-center"/>
-<attribute name="PACKAGE" value="0402 Wurth Electronics" x="113.85" y="-55.6" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="113.85" y="-55.6" size="1.778" layer="27" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=snap" x="113.85" y="-55.6" size="1.778" layer="27" display="off"/>
+<element name="C3" library="WCAP-CSGP_0402" package="WCAP-CSGP_0402" value="WCAP-CSGP_0402_50V(DC)" x="61.93" y="20.6" smashed="yes">
+<attribute name="AVAILABILITY" value="In Stock" x="114" y="-55.6" size="1.778" layer="27" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=eda" x="114" y="-55.6" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      WCAP-CSGP General Purpose MLCC; SMT 0402; X5R; 100nF  20%; 10V; -55C to +85C; Tech. PN X5R0402104M010DFCT10000                                              " x="114" y="-55.6" size="1.778" layer="27" display="off"/>
+<attribute name="LCSC" value="C1581" x="114" y="-55.6" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Würth Elektronik" x="114" y="-55.6" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="885012105010" x="114" y="-55.6" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="61.88" y="21.25" size="0.3048" layer="25" align="bottom-center"/>
+<attribute name="PACKAGE" value="0402 Wurth Electronics" x="114" y="-55.6" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="None" x="114" y="-55.6" size="1.778" layer="27" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=snap" x="114" y="-55.6" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C4" library="WCAP-CSGP_0402" package="WCAP-CSGP_0402" value="WCAP-CSGP_0402_50V(DC)" x="62.08" y="18.05" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="120.5" y="-58.15" size="1.778" layer="27" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=eda" x="120.5" y="-58.15" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      WCAP-CSGP General Purpose MLCC; SMT 0402; X5R; 100nF  20%; 10V; -55C to +85C; Tech. PN X5R0402104M010DFCT10000                                              " x="120.5" y="-58.15" size="1.778" layer="27" display="off"/>
-<attribute name="LCSC" value="C1581" x="120.5" y="-58.15" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Würth Elektronik" x="120.5" y="-58.15" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="885012105010" x="120.5" y="-58.15" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="62.03" y="18.7" size="0.3048" layer="25" align="bottom-center"/>
-<attribute name="PACKAGE" value="0402 Wurth Electronics" x="120.5" y="-58.15" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="120.5" y="-58.15" size="1.778" layer="27" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=snap" x="120.5" y="-58.15" size="1.778" layer="27" display="off"/>
+<element name="C4" library="WCAP-CSGP_0402" package="WCAP-CSGP_0402" value="WCAP-CSGP_0402_50V(DC)" x="61.93" y="18.05" smashed="yes">
+<attribute name="AVAILABILITY" value="In Stock" x="120.35" y="-58.15" size="1.778" layer="27" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=eda" x="120.35" y="-58.15" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      WCAP-CSGP General Purpose MLCC; SMT 0402; X5R; 100nF  20%; 10V; -55C to +85C; Tech. PN X5R0402104M010DFCT10000                                              " x="120.35" y="-58.15" size="1.778" layer="27" display="off"/>
+<attribute name="LCSC" value="C1581" x="120.35" y="-58.15" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Würth Elektronik" x="120.35" y="-58.15" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="885012105010" x="120.35" y="-58.15" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="61.88" y="18.7" size="0.3048" layer="25" align="bottom-center"/>
+<attribute name="PACKAGE" value="0402 Wurth Electronics" x="120.35" y="-58.15" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="None" x="120.35" y="-58.15" size="1.778" layer="27" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/885012105010/W%25C3%25BCrth+Elektronik+Midcom/view-part/?ref=snap" x="120.35" y="-58.15" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C5" library="TM_Lib" package="XLR-TRS-THRU-HOLE-FEMALE-AMPHENOL" value="XLR-TRS-THRU-HOLE-FEMALE-AMPHENOL" x="93.98" y="13.97" smashed="yes" rot="R270"/>
 <element name="C6" library="TM_Lib" package="XLR-TRS-THRU-HOLE-FEMALE-AMPHENOL" value="XLR-TRS-THRU-HOLE-FEMALE-AMPHENOL" x="5.08" y="13.82" smashed="yes" rot="R90"/>
@@ -1730,15 +1730,15 @@ design rules under a new name.</description>
 <attribute name="PRICE" value="None" x="69.2" y="-76.3" size="1.778" layer="27" display="off"/>
 <attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MMSZ4693T1G/Onsemi/view-part/?ref=snap" x="69.2" y="-76.3" size="1.778" layer="27" display="off"/>
 </element>
-<element name="J1" library="TMS-101-51-G-D" package="SAMTEC_TMS-101-51-G-D" value="TMS-101-51-G-D" x="60.55" y="15.08" smashed="yes" rot="R270">
-<attribute name="AVAILABILITY" value="In Stock" x="24.99" y="-52.23" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=eda" x="24.99" y="-52.23" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 2 position                                               " x="24.99" y="-52.23" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Samtec" x="24.99" y="-52.23" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MP" value="TMS-101-51-G-D" x="24.99" y="-52.23" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PACKAGE" value="None" x="24.99" y="-52.23" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PRICE" value="None" x="24.99" y="-52.23" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=snap" x="24.99" y="-52.23" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="J1" library="TMS-101-51-G-D" package="SAMTEC_TMS-101-51-G-D" value="TMS-101-51-G-D" x="56.2" y="12.23" smashed="yes" rot="R270">
+<attribute name="AVAILABILITY" value="In Stock" x="20.64" y="-55.08" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=eda" x="20.64" y="-55.08" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 2 position                                               " x="20.64" y="-55.08" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="Samtec" x="20.64" y="-55.08" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MP" value="TMS-101-51-G-D" x="20.64" y="-55.08" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PACKAGE" value="None" x="20.64" y="-55.08" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE" value="None" x="20.64" y="-55.08" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=snap" x="20.64" y="-55.08" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="J10" library="TMS-101-51-G-D" package="SAMTEC_TMS-101-51-G-D" value="TMS-101-51-G-D" x="56.2" y="20.78" smashed="yes" rot="R270">
 <attribute name="AVAILABILITY" value="In Stock" x="6.67" y="-21.13" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1750,95 +1750,95 @@ design rules under a new name.</description>
 <attribute name="PRICE" value="None" x="6.67" y="-21.13" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=snap" x="6.67" y="-21.13" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="J11" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="31.68" y="29.44" smashed="yes" rot="R90">
-<attribute name="AVAILABILITY" value="In Stock" x="101.53" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="101.53" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="101.53" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samtec" x="101.53" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MP" value="MTMM-101-05-T-S-208" x="101.53" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PACKAGE" value="None" x="101.53" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE" value="None" x="101.53" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="101.53" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="J11" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="31.5639625" y="29.39" smashed="yes" rot="R90">
+<attribute name="AVAILABILITY" value="In Stock" x="101.4139625" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="101.4139625" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="101.4139625" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="Samtec" x="101.4139625" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MP" value="MTMM-101-05-T-S-208" x="101.4139625" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PACKAGE" value="None" x="101.4139625" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PRICE" value="None" x="101.4139625" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="101.4139625" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="J12" library="TMS-101-51-G-D" package="SAMTEC_TMS-101-51-G-D" value="TMS-101-51-G-D" x="56.4" y="17.98" smashed="yes" rot="R270">
-<attribute name="AVAILABILITY" value="In Stock" x="6.87" y="-39.17" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=eda" x="6.87" y="-39.17" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 2 position                                               " x="6.87" y="-39.17" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Samtec" x="6.87" y="-39.17" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MP" value="TMS-101-51-G-D" x="6.87" y="-39.17" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PACKAGE" value="None" x="6.87" y="-39.17" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PRICE" value="None" x="6.87" y="-39.17" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=snap" x="6.87" y="-39.17" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="J12" library="TMS-101-51-G-D" package="SAMTEC_TMS-101-51-G-D" value="TMS-101-51-G-D" x="56.2" y="17.93" smashed="yes" rot="R270">
+<attribute name="AVAILABILITY" value="In Stock" x="6.67" y="-39.22" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=eda" x="6.67" y="-39.22" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 2 position                                               " x="6.67" y="-39.22" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="Samtec" x="6.67" y="-39.22" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MP" value="TMS-101-51-G-D" x="6.67" y="-39.22" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PACKAGE" value="None" x="6.67" y="-39.22" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE" value="None" x="6.67" y="-39.22" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=snap" x="6.67" y="-39.22" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="J2" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="61.013325" y="29.49" smashed="yes" rot="R90">
-<attribute name="AVAILABILITY" value="In Stock" x="110.543325" y="105.69" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="110.543325" y="105.69" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="110.543325" y="105.69" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samtec" x="110.543325" y="105.69" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MP" value="MTMM-101-05-T-S-208" x="110.543325" y="105.69" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PACKAGE" value="None" x="110.543325" y="105.69" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE" value="None" x="110.543325" y="105.69" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="110.543325" y="105.69" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="J2" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="61.418275" y="29.39" smashed="yes" rot="R90">
+<attribute name="AVAILABILITY" value="In Stock" x="110.948275" y="105.59" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="110.948275" y="105.59" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="110.948275" y="105.59" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="Samtec" x="110.948275" y="105.59" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MP" value="MTMM-101-05-T-S-208" x="110.948275" y="105.59" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PACKAGE" value="None" x="110.948275" y="105.59" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PRICE" value="None" x="110.948275" y="105.59" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="110.948275" y="105.59" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="J3" library="TMS-101-51-G-D" package="SAMTEC_TMS-101-51-G-D" value="TMS-101-51-G-D" x="60.55" y="12.13" smashed="yes" rot="R270">
-<attribute name="AVAILABILITY" value="In Stock" x="11.02" y="-14.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=eda" x="11.02" y="-14.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 2 position                                               " x="11.02" y="-14.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Samtec" x="11.02" y="-14.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MP" value="TMS-101-51-G-D" x="11.02" y="-14.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PACKAGE" value="None" x="11.02" y="-14.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PRICE" value="None" x="11.02" y="-14.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=snap" x="11.02" y="-14.54" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="J3" library="TMS-101-51-G-D" package="SAMTEC_TMS-101-51-G-D" value="TMS-101-51-G-D" x="56.2" y="15.08" smashed="yes" rot="R270">
+<attribute name="AVAILABILITY" value="In Stock" x="6.67" y="-11.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=eda" x="6.67" y="-11.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 2 position                                               " x="6.67" y="-11.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="Samtec" x="6.67" y="-11.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MP" value="TMS-101-51-G-D" x="6.67" y="-11.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PACKAGE" value="None" x="6.67" y="-11.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE" value="None" x="6.67" y="-11.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/TMS-101-51-G-D/Samtec/view-part/?ref=snap" x="6.67" y="-11.59" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="J4" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="37.6994375" y="29.39" smashed="yes" rot="R90">
-<attribute name="AVAILABILITY" value="In Stock" x="97.3894375" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="97.3894375" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="97.3894375" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samtec" x="97.3894375" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MP" value="MTMM-101-05-T-S-208" x="97.3894375" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PACKAGE" value="None" x="97.3894375" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE" value="None" x="97.3894375" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="97.3894375" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="J4" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="37.534825" y="29.39" smashed="yes" rot="R90">
+<attribute name="AVAILABILITY" value="In Stock" x="97.224825" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="97.224825" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="97.224825" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="Samtec" x="97.224825" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MP" value="MTMM-101-05-T-S-208" x="97.224825" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PACKAGE" value="None" x="97.224825" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PRICE" value="None" x="97.224825" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="97.224825" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="J5" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="43.83555" y="29.49" smashed="yes" rot="R90">
-<attribute name="AVAILABILITY" value="In Stock" x="103.52555" y="76.48" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="103.52555" y="76.48" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="103.52555" y="76.48" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samtec" x="103.52555" y="76.48" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MP" value="MTMM-101-05-T-S-208" x="103.52555" y="76.48" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PACKAGE" value="None" x="103.52555" y="76.48" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE" value="None" x="103.52555" y="76.48" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="103.52555" y="76.48" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="J5" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="43.5056875" y="29.39" smashed="yes" rot="R90">
+<attribute name="AVAILABILITY" value="In Stock" x="103.1956875" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="103.1956875" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="103.1956875" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="Samtec" x="103.1956875" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MP" value="MTMM-101-05-T-S-208" x="103.1956875" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PACKAGE" value="None" x="103.1956875" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PRICE" value="None" x="103.1956875" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="103.1956875" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="J6" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="66.8216625" y="29.74" smashed="yes" rot="R90">
-<attribute name="AVAILABILITY" value="In Stock" x="126.5116625" y="94.51" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="126.5116625" y="94.51" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="126.5116625" y="94.51" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samtec" x="126.5116625" y="94.51" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MP" value="MTMM-101-05-T-S-208" x="126.5116625" y="94.51" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PACKAGE" value="None" x="126.5116625" y="94.51" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE" value="None" x="126.5116625" y="94.51" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="126.5116625" y="94.51" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="J6" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="67.3891375" y="29.39" smashed="yes" rot="R90">
+<attribute name="AVAILABILITY" value="In Stock" x="127.0791375" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="127.0791375" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="127.0791375" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="Samtec" x="127.0791375" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MP" value="MTMM-101-05-T-S-208" x="127.0791375" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PACKAGE" value="None" x="127.0791375" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PRICE" value="None" x="127.0791375" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="127.0791375" y="94.16" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="J7" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="54.7938875" y="29.79" smashed="yes" rot="R90">
-<attribute name="AVAILABILITY" value="In Stock" x="124.6438875" y="59" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="124.6438875" y="59" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="124.6438875" y="59" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samtec" x="124.6438875" y="59" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MP" value="MTMM-101-05-T-S-208" x="124.6438875" y="59" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PACKAGE" value="None" x="124.6438875" y="59" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE" value="None" x="124.6438875" y="59" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="124.6438875" y="59" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="J7" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="55.4474125" y="29.39" smashed="yes" rot="R90">
+<attribute name="AVAILABILITY" value="In Stock" x="125.2974125" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="125.2974125" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="125.2974125" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="Samtec" x="125.2974125" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MP" value="MTMM-101-05-T-S-208" x="125.2974125" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PACKAGE" value="None" x="125.2974125" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PRICE" value="None" x="125.2974125" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="125.2974125" y="58.6" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="J8" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="49.007775" y="29.69" smashed="yes" rot="R90">
-<attribute name="AVAILABILITY" value="In Stock" x="118.857775" y="76.68" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="118.857775" y="76.68" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="118.857775" y="76.68" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samtec" x="118.857775" y="76.68" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MP" value="MTMM-101-05-T-S-208" x="118.857775" y="76.68" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PACKAGE" value="None" x="118.857775" y="76.68" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE" value="None" x="118.857775" y="76.68" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="118.857775" y="76.68" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="J8" library="MTMM-101-X-X-S-X" package="SAMTEC_MTMM-101-X-X-S-X" value="MTMM-101-X-X-S-X" x="49.47655" y="29.39" smashed="yes" rot="R90">
+<attribute name="AVAILABILITY" value="In Stock" x="119.32655" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=eda" x="119.32655" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      Connector Header Through Hole 1 position                                              " x="119.32655" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="Samtec" x="119.32655" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MP" value="MTMM-101-05-T-S-208" x="119.32655" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PACKAGE" value="None" x="119.32655" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PRICE" value="None" x="119.32655" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MTMM-101-05-T-S-208/Samtec/view-part/?ref=snap" x="119.32655" y="76.38" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="Q1" library="L78M05CV" package="TO254P450X1020X1935-3P" value="L78M05CV" x="43.28" y="13.35" smashed="yes">
 <attribute name="AVAILABILITY" value="In Stock" x="63.6" y="-24.75" size="1.778" layer="27" display="off"/>
@@ -1851,20 +1851,20 @@ design rules under a new name.</description>
 <attribute name="PRICE" value="None" x="63.6" y="-24.75" size="1.778" layer="27" display="off"/>
 <attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/L78M05CV/STMicroelectronics/view-part/?ref=snap" x="63.6" y="-24.75" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1M" x="40.32" y="17.27" smashed="yes">
-<attribute name="LCSC" value="C17514" x="70.8" y="-60.2" size="1.778" layer="27" display="off"/>
-<attribute name="POPULARITY" value="0" x="70.8" y="-60.2" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="70.8" y="-60.2" size="1.778" layer="27" display="off"/>
+<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1M" x="40.215" y="17.3558" smashed="yes">
+<attribute name="LCSC" value="C17514" x="70.695" y="-60.1142" size="1.778" layer="27" display="off"/>
+<attribute name="POPULARITY" value="0" x="70.695" y="-60.1142" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="70.695" y="-60.1142" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="4.7M" x="47.23" y="6.12" smashed="yes" rot="R270">
-<attribute name="LCSC" value="C17674" x="-30.24" y="-20.55" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="POPULARITY" value="0" x="-30.24" y="-20.55" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="-30.24" y="-20.55" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="4.7M" x="50.0325" y="4.57" smashed="yes">
+<attribute name="LCSC" value="C17674" x="76.7025" y="-72.9" size="1.778" layer="27" display="off"/>
+<attribute name="POPULARITY" value="0" x="76.7025" y="-72.9" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="76.7025" y="-72.9" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1M" x="40.11" y="19.67" smashed="yes">
-<attribute name="LCSC" value="C17514" x="74.4" y="-57.8" size="1.778" layer="27" display="off"/>
-<attribute name="POPULARITY" value="0" x="74.4" y="-57.8" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="74.4" y="-57.8" size="1.778" layer="27" display="off"/>
+<element name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1M" x="40.215" y="19.5392" smashed="yes">
+<attribute name="LCSC" value="C17514" x="74.505" y="-57.9308" size="1.778" layer="27" display="off"/>
+<attribute name="POPULARITY" value="0" x="74.505" y="-57.9308" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="74.505" y="-57.9308" size="1.778" layer="27" display="off"/>
 </element>
 <element name="T1" library="MET-60-T" package="XFMR_MET-60-T" value="MET-60-T" x="40.76" y="5.4185" smashed="yes" rot="R180">
 <attribute name="AVAILABILITY" value="In Stock" x="5.2" y="42.2485" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1886,38 +1886,58 @@ design rules under a new name.</description>
 <attribute name="PRICE" value="None" x="106.68" y="-31.4115" size="1.778" layer="27" display="off"/>
 <attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/MET-60-T/Triad+Magnetics/view-part/?ref=snap" x="106.68" y="-31.4115" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U1" library="LMH6639MF" package="SOT95P280X145-6N" value="LMH6639MF" x="50.62" y="6.28" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="125.55" y="-62.3" size="1.778" layer="27" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/LMH6639MF/Texas+Instruments/view-part/?ref=eda" x="125.55" y="-62.3" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="                                                      190MHz Rail-to-Rail Output Amplifier with Disable 6-SOT-23 -40 to 85                                              " x="125.55" y="-62.3" size="1.778" layer="27" display="off"/>
-<attribute name="LCSC" value="C131982" x="125.55" y="-62.3" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Texas Instruments" x="125.55" y="-62.3" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="LMH6639MF" x="125.55" y="-62.3" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE" value="SOT-23-6 Texas Instruments" x="125.55" y="-62.3" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="125.55" y="-62.3" size="1.778" layer="27" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/LMH6639MF/Texas+Instruments/view-part/?ref=snap" x="125.55" y="-62.3" size="1.778" layer="27" display="off"/>
+<element name="U1" library="LMH6639MF" package="SOT95P280X145-6N" value="LMH6639MF" x="50.015" y="7.28" smashed="yes">
+<attribute name="AVAILABILITY" value="In Stock" x="124.945" y="-61.3" size="1.778" layer="27" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/LMH6639MF/Texas+Instruments/view-part/?ref=eda" x="124.945" y="-61.3" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      190MHz Rail-to-Rail Output Amplifier with Disable 6-SOT-23 -40 to 85                                              " x="124.945" y="-61.3" size="1.778" layer="27" display="off"/>
+<attribute name="LCSC" value="C131982" x="124.945" y="-61.3" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Texas Instruments" x="124.945" y="-61.3" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="LMH6639MF" x="124.945" y="-61.3" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="SOT-23-6 Texas Instruments" x="124.945" y="-61.3" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="None" x="124.945" y="-61.3" size="1.778" layer="27" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/LMH6639MF/Texas+Instruments/view-part/?ref=snap" x="124.945" y="-61.3" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
 <signals>
 <signal name="N$2" class="1">
 <contactref element="T1" pad="5"/>
 <contactref element="C6" pad="3"/>
-<wire x1="25.28" y1="13.82" x2="36.95" y2="2.8785" width="0" layer="19" extent="1-1"/>
+<wire x1="36.7284" y1="2.8956" x2="36.8808" y2="2.8956" width="0.2" layer="1"/>
+<wire x1="25.8318" y1="13.7922" x2="36.7284" y2="2.8956" width="0.2" layer="1"/>
+<wire x1="25.2984" y1="13.7922" x2="25.8318" y2="13.7922" width="0.2" layer="1"/>
+<wire x1="36.8808" y1="2.8956" x2="36.95" y2="2.8785" width="0.2" layer="1"/>
+<wire x1="25.2984" y1="13.7922" x2="25.28" y2="13.82" width="0.2" layer="1"/>
 </signal>
 <signal name="N$1" class="1">
 <contactref element="T1" pad="3"/>
 <contactref element="C6" pad="2"/>
-<wire x1="25.28" y1="20.07" x2="36.95" y2="7.9585" width="0" layer="19" extent="1-1"/>
+<wire x1="36.6522" y1="8.001" x2="36.8808" y2="8.001" width="0.2" layer="1"/>
+<wire x1="25.2984" y1="19.3548" x2="36.6522" y2="8.001" width="0.2" layer="1"/>
+<wire x1="25.2984" y1="20.0406" x2="25.2984" y2="19.3548" width="0.2" layer="1"/>
+<wire x1="36.8808" y1="8.001" x2="36.95" y2="7.9585" width="0.2" layer="1"/>
+<wire x1="25.2984" y1="20.0406" x2="25.28" y2="20.07" width="0.2" layer="1"/>
 </signal>
 <signal name="N$3" class="1">
 <contactref element="T2" pad="3"/>
 <contactref element="C5" pad="2"/>
-<wire x1="62.23" y1="2.8785" x2="73.78" y2="7.72" width="0" layer="19" extent="1-1"/>
+<wire x1="62.4078" y1="2.8956" x2="62.2554" y2="2.8956" width="0.2" layer="1"/>
+<wire x1="66.294" y1="6.7818" x2="62.4078" y2="2.8956" width="0.2" layer="1"/>
+<wire x1="72.1614" y1="6.7818" x2="66.294" y2="6.7818" width="0.2" layer="1"/>
+<wire x1="73.0758" y1="7.6962" x2="72.1614" y2="6.7818" width="0.2" layer="1"/>
+<wire x1="73.7616" y1="7.6962" x2="73.0758" y2="7.6962" width="0.2" layer="1"/>
+<wire x1="62.2554" y1="2.8956" x2="62.23" y2="2.8785" width="0.2" layer="1"/>
+<wire x1="73.7616" y1="7.6962" x2="73.78" y2="7.72" width="0.2" layer="1"/>
 </signal>
 <signal name="N$4" class="1">
 <contactref element="C5" pad="3"/>
 <contactref element="T2" pad="5"/>
-<wire x1="62.23" y1="7.9585" x2="73.78" y2="13.97" width="0" layer="19" extent="1-1"/>
+<wire x1="62.5602" y1="8.001" x2="62.2554" y2="8.001" width="0.2" layer="1"/>
+<wire x1="67.5894" y1="13.0302" x2="62.5602" y2="8.001" width="0.2" layer="1"/>
+<wire x1="72.1614" y1="13.0302" x2="67.5894" y2="13.0302" width="0.2" layer="1"/>
+<wire x1="73.0758" y1="13.9446" x2="72.1614" y2="13.0302" width="0.2" layer="1"/>
+<wire x1="73.7616" y1="13.9446" x2="73.0758" y2="13.9446" width="0.2" layer="1"/>
+<wire x1="62.2554" y1="8.001" x2="62.23" y2="7.9585" width="0.2" layer="1"/>
+<wire x1="73.7616" y1="13.9446" x2="73.78" y2="13.97" width="0.2" layer="1"/>
 </signal>
 <signal name="N$5" class="1">
 <contactref element="T1" pad="4"/>
@@ -1925,10 +1945,32 @@ design rules under a new name.</description>
 <contactref element="T2" pad="4"/>
 <contactref element="Q1" pad="1"/>
 <contactref element="J6" pad="01"/>
-<wire x1="38.2" y1="12.2578" x2="66.8216625" y2="29.74" width="0" layer="19" extent="1-1"/>
-<wire x1="36.95" y1="5.4185" x2="38.2" y2="12.2578" width="0" layer="19" extent="1-1"/>
-<wire x1="47.23" y1="5.62" x2="36.95" y2="5.4185" width="0" layer="19" extent="1-1"/>
-<wire x1="62.23" y1="5.4185" x2="47.23" y2="5.62" width="0" layer="19" extent="1-1"/>
+<wire x1="50.5206" y1="3.8862" x2="50.5206" y2="4.4958" width="0.2" layer="1"/>
+<wire x1="50.2158" y1="3.5814" x2="50.5206" y2="3.8862" width="0.2" layer="1"/>
+<wire x1="47.244" y1="3.5814" x2="50.2158" y2="3.5814" width="0.2" layer="1"/>
+<wire x1="38.6334" y1="12.192" x2="41.2623" y2="9.5631" width="0.2" layer="1"/>
+<wire x1="41.2623" y1="9.5631" x2="47.244" y2="3.5814" width="0.2" layer="1"/>
+<wire x1="38.2524" y1="12.192" x2="38.6334" y2="12.192" width="0.2" layer="1"/>
+<wire x1="50.5206" y1="4.4958" x2="50.5325" y2="4.57" width="0.2" layer="1"/>
+<wire x1="38.2524" y1="12.192" x2="38.2" y2="12.2578" width="0.2" layer="1"/>
+<wire x1="37.1856" y1="5.4864" x2="36.957" y2="5.4864" width="0.2" layer="1"/>
+<wire x1="41.2623" y1="9.5631" x2="37.1856" y2="5.4864" width="0.2" layer="1"/>
+<wire x1="36.957" y1="5.4864" x2="36.95" y2="5.4185" width="0.2" layer="1"/>
+<wire x1="62.0268" y1="5.4102" x2="62.1792" y2="5.4102" width="0.2" layer="1"/>
+<wire x1="58.0644" y1="1.4478" x2="62.0268" y2="5.4102" width="0.2" layer="1"/>
+<wire x1="51.054" y1="1.4478" x2="58.0644" y2="1.4478" width="0.2" layer="1"/>
+<wire x1="50.292" y1="2.2098" x2="51.054" y2="1.4478" width="0.2" layer="1"/>
+<wire x1="50.292" y1="3.429" x2="50.292" y2="2.2098" width="0.2" layer="1"/>
+<wire x1="50.2158" y1="3.5052" x2="50.292" y2="3.429" width="0.2" layer="1"/>
+<wire x1="62.1792" y1="5.4102" x2="62.23" y2="5.4185" width="0.2" layer="1"/>
+<wire x1="50.2158" y1="3.5052" x2="50.2158" y2="3.5814" width="0.2" layer="1"/>
+<wire x1="67.3608" y1="29.1084" x2="67.3608" y2="29.337" width="0.2" layer="16"/>
+<wire x1="63.4746" y1="25.2222" x2="67.3608" y2="29.1084" width="0.2" layer="16"/>
+<wire x1="63.4746" y1="6.858" x2="63.4746" y2="25.2222" width="0.2" layer="16"/>
+<wire x1="62.2554" y1="5.6388" x2="63.4746" y2="6.858" width="0.2" layer="16"/>
+<wire x1="62.2554" y1="5.4864" x2="62.2554" y2="5.6388" width="0.2" layer="16"/>
+<wire x1="67.3608" y1="29.337" x2="67.3891375" y2="29.39" width="0.2" layer="16"/>
+<wire x1="62.2554" y1="5.4864" x2="62.23" y2="5.4185" width="0.2" layer="16"/>
 </signal>
 <signal name="N$7">
 <contactref element="T1" pad="1"/>
@@ -1938,12 +1980,39 @@ design rules under a new name.</description>
 <contactref element="U1" pad="4"/>
 <contactref element="R1" pad="2"/>
 <contactref element="R3" pad="2"/>
-<wire x1="40.61" y1="19.67" x2="54.7938875" y2="29.79" width="0" layer="19" extent="1-1"/>
-<wire x1="40.82" y1="17.27" x2="40.61" y2="19.67" width="0" layer="19" extent="1-1"/>
-<wire x1="49.365" y1="7.23" x2="40.82" y2="17.27" width="0" layer="19" extent="1-1"/>
-<wire x1="51.875" y1="5.33" x2="49.365" y2="7.23" width="0" layer="19" extent="1-1"/>
-<wire x1="54.61" y1="7.9585" x2="51.875" y2="5.33" width="0" layer="19" extent="1-1"/>
-<wire x1="44.57" y1="2.8785" x2="49.365" y2="7.23" width="0" layer="19" extent="1-1"/>
+<wire x1="40.767" y1="19.5072" x2="40.767" y2="17.3736" width="0.1524" layer="1"/>
+<wire x1="40.767" y1="17.3736" x2="40.715" y2="17.3558" width="0.1524" layer="1"/>
+<wire x1="40.767" y1="19.5072" x2="40.715" y2="19.5392" width="0.1524" layer="1"/>
+<wire x1="51.2826" y1="5.715" x2="51.2826" y2="6.3246" width="0.1524" layer="1"/>
+<wire x1="51.5112" y1="5.4864" x2="51.2826" y2="5.715" width="0.1524" layer="1"/>
+<wire x1="54.0258" y1="8.001" x2="52.0065" y2="5.9817" width="0.1524" layer="16"/>
+<wire x1="52.0065" y1="5.9817" x2="51.5112" y2="5.4864" width="0.1524" layer="16"/>
+<wire x1="54.5592" y1="8.001" x2="54.0258" y2="8.001" width="0.1524" layer="16"/>
+<wire x1="51.2826" y1="6.3246" x2="51.27" y2="6.33" width="0.1524" layer="1"/>
+<wire x1="54.5592" y1="8.001" x2="54.61" y2="7.9585" width="0.1524" layer="16"/>
+<wire x1="49.7586" y1="8.2296" x2="48.768" y2="8.2296" width="0.1524" layer="1"/>
+<wire x1="49.9872" y1="8.001" x2="49.7586" y2="8.2296" width="0.1524" layer="1"/>
+<wire x1="52.0065" y1="5.9817" x2="49.9872" y2="8.001" width="0.1524" layer="16"/>
+<wire x1="48.768" y1="8.2296" x2="48.76" y2="8.23" width="0.1524" layer="1"/>
+<wire x1="40.767" y1="16.6116" x2="40.767" y2="17.2974" width="0.1524" layer="1"/>
+<wire x1="40.9194" y1="16.4592" x2="40.767" y2="16.6116" width="0.1524" layer="1"/>
+<wire x1="41.529" y1="16.4592" x2="40.9194" y2="16.4592" width="0.1524" layer="16"/>
+<wire x1="49.9872" y1="8.001" x2="49.4919" y2="8.4963" width="0.1524" layer="16"/>
+<wire x1="49.4919" y1="8.4963" x2="41.529" y2="16.4592" width="0.1524" layer="16"/>
+<wire x1="40.767" y1="17.2974" x2="40.715" y2="17.3558" width="0.1524" layer="1"/>
+<wire x1="44.577" y1="3.5814" x2="44.577" y2="2.8956" width="0.1524" layer="16"/>
+<wire x1="49.4919" y1="8.4963" x2="44.577" y2="3.5814" width="0.1524" layer="16"/>
+<wire x1="44.577" y1="2.8956" x2="44.57" y2="2.8785" width="0.1524" layer="16"/>
+<wire x1="55.245" y1="29.4132" x2="55.3974" y2="29.4132" width="0.1524" layer="1"/>
+<wire x1="53.9496" y1="30.7086" x2="55.245" y2="29.4132" width="0.1524" layer="1"/>
+<wire x1="48.9966" y1="30.7086" x2="53.9496" y2="30.7086" width="0.1524" layer="1"/>
+<wire x1="40.767" y1="22.479" x2="48.9966" y2="30.7086" width="0.1524" layer="1"/>
+<wire x1="40.767" y1="19.5834" x2="40.767" y2="22.479" width="0.1524" layer="1"/>
+<wire x1="55.3974" y1="29.4132" x2="55.4474125" y2="29.39" width="0.1524" layer="1"/>
+<wire x1="40.767" y1="19.5834" x2="40.715" y2="19.5392" width="0.1524" layer="1"/>
+<via x="51.5112" y="5.4864" extent="1-16" drill="0.35"/>
+<via x="49.9872" y="8.001" extent="1-16" drill="0.35"/>
+<via x="40.9194" y="16.4592" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="0V" class="1">
 <contactref element="U1" pad="2"/>
@@ -1954,32 +2023,106 @@ design rules under a new name.</description>
 <contactref element="C5" pad="1"/>
 <contactref element="J8" pad="01"/>
 <contactref element="B1" pad="P$1"/>
-<wire x1="51.875" y1="6.28" x2="74.38" y2="20.22" width="0" layer="19" extent="1-1"/>
-<wire x1="49.365" y1="6.28" x2="51.875" y2="6.28" width="0" layer="19" extent="1-1"/>
-<wire x1="51.88" y1="2.44" x2="51.875" y2="6.28" width="0" layer="19" extent="1-1"/>
-<wire x1="47.858" y1="9.675" x2="49.365" y2="6.28" width="0" layer="19" extent="1-1"/>
-<wire x1="40.74" y1="12.2578" x2="47.858" y2="9.675" width="0" layer="19" extent="1-1"/>
-<wire x1="24.68" y1="7.57" x2="40.74" y2="12.2578" width="0" layer="19" extent="1-1"/>
-<wire x1="49.007775" y1="29.69" x2="40.74" y2="12.2578" width="0" layer="19" extent="1-1"/>
+<wire x1="51.8922" y1="4.953" x2="51.8922" y2="2.5146" width="0.2" layer="1"/>
+<wire x1="52.5018" y1="5.5626" x2="51.8922" y2="4.953" width="0.2" layer="1"/>
+<wire x1="52.5018" y1="6.7818" x2="52.5018" y2="5.5626" width="0.2" layer="1"/>
+<wire x1="51.9684" y1="7.3152" x2="52.5018" y2="6.7818" width="0.2" layer="1"/>
+<wire x1="51.2826" y1="7.3152" x2="51.9684" y2="7.3152" width="0.2" layer="1"/>
+<wire x1="51.8922" y1="2.5146" x2="51.88" y2="2.44" width="0.2" layer="1"/>
+<wire x1="51.2826" y1="7.3152" x2="51.27" y2="7.28" width="0.2" layer="1"/>
+<wire x1="51.2064" y1="7.3152" x2="48.768" y2="7.3152" width="0.2" layer="1"/>
+<wire x1="48.768" y1="7.3152" x2="48.76" y2="7.28" width="0.2" layer="1"/>
+<wire x1="51.2064" y1="7.3152" x2="51.27" y2="7.28" width="0.2" layer="1"/>
+<wire x1="49.4538" y1="29.1084" x2="49.4538" y2="29.337" width="0.2" layer="1"/>
+<wire x1="41.6052" y1="21.2598" x2="49.4538" y2="29.1084" width="0.2" layer="1"/>
+<wire x1="41.6052" y1="13.4874" x2="41.6052" y2="21.2598" width="0.2" layer="1"/>
+<wire x1="40.767" y1="12.6492" x2="41.6052" y2="13.4874" width="0.2" layer="1"/>
+<wire x1="40.767" y1="12.2682" x2="40.767" y2="12.6492" width="0.2" layer="1"/>
+<wire x1="49.4538" y1="29.337" x2="49.47655" y2="29.39" width="0.2" layer="1"/>
+<wire x1="40.767" y1="12.2682" x2="40.74" y2="12.2578" width="0.2" layer="1"/>
+<wire x1="46.9392" y1="7.3152" x2="48.6918" y2="7.3152" width="0.2" layer="1"/>
+<wire x1="43.5864" y1="10.668" x2="46.9392" y2="7.3152" width="0.2" layer="1"/>
+<wire x1="42.5958" y1="10.668" x2="43.5864" y2="10.668" width="0.2" layer="1"/>
+<wire x1="40.8432" y1="12.4206" x2="42.5958" y2="10.668" width="0.2" layer="1"/>
+<wire x1="48.6918" y1="7.3152" x2="48.76" y2="7.28" width="0.2" layer="1"/>
+<wire x1="40.8432" y1="12.4206" x2="40.74" y2="12.2578" width="0.2" layer="1"/>
+<wire x1="25.6794" y1="7.62" x2="24.6888" y2="7.62" width="0.2" layer="16"/>
+<wire x1="28.8036" y1="10.7442" x2="25.6794" y2="7.62" width="0.2" layer="16"/>
+<wire x1="39.3954" y1="10.7442" x2="28.8036" y2="10.7442" width="0.2" layer="16"/>
+<wire x1="40.6908" y1="12.0396" x2="39.3954" y2="10.7442" width="0.2" layer="16"/>
+<wire x1="40.6908" y1="12.192" x2="40.6908" y2="12.0396" width="0.2" layer="16"/>
+<wire x1="24.6888" y1="7.62" x2="24.68" y2="7.57" width="0.2" layer="16"/>
+<wire x1="40.6908" y1="12.192" x2="40.74" y2="12.2578" width="0.2" layer="16"/>
+<wire x1="73.4568" y1="20.193" x2="74.3712" y2="20.193" width="0.2" layer="1"/>
+<wire x1="62.484" y1="9.2202" x2="73.4568" y2="20.193" width="0.2" layer="1"/>
+<wire x1="57.912" y1="9.2202" x2="61" y2="9.2202" width="0.2" layer="1"/>
+<wire x1="61" y1="9.2202" x2="62.484" y2="9.2202" width="0.2" layer="1"/>
+<wire x1="55.4736" y1="6.7818" x2="57.912" y2="9.2202" width="0.2" layer="1"/>
+<wire x1="52.5018" y1="6.7818" x2="55.4736" y2="6.7818" width="0.2" layer="1"/>
+<wire x1="74.3712" y1="20.193" x2="74.38" y2="20.22" width="0.2" layer="1"/>
+<wire x1="61.1075" y1="9.242" x2="61.0857" y2="9.2202" width="0.5" layer="1"/>
+<wire x1="61.0857" y1="9.2202" x2="61" y2="9.2202" width="0.5" layer="1"/>
 </signal>
 <signal name="N$6">
 <contactref element="R2" pad="1"/>
 <contactref element="U1" pad="3"/>
 <contactref element="D1" pad="1"/>
-<wire x1="47.23" y1="6.62" x2="48.42" y2="2.44" width="0" layer="19" extent="1-1"/>
-<wire x1="49.365" y1="5.33" x2="48.42" y2="2.44" width="0" layer="19" extent="1-1"/>
+<wire x1="49.53" y1="5.2578" x2="49.53" y2="4.572" width="0.1524" layer="1"/>
+<wire x1="48.9966" y1="5.7912" x2="49.53" y2="5.2578" width="0.1524" layer="1"/>
+<wire x1="48.9966" y1="6.096" x2="48.9966" y2="5.7912" width="0.1524" layer="1"/>
+<wire x1="48.768" y1="6.3246" x2="48.9966" y2="6.096" width="0.1524" layer="1"/>
+<wire x1="49.53" y1="4.572" x2="49.5325" y2="4.57" width="0.1524" layer="1"/>
+<wire x1="48.768" y1="6.3246" x2="48.76" y2="6.33" width="0.1524" layer="1"/>
+<wire x1="49.2252" y1="2.5146" x2="48.4632" y2="2.5146" width="0.1524" layer="1"/>
+<wire x1="49.6062" y1="2.8956" x2="49.2252" y2="2.5146" width="0.1524" layer="1"/>
+<wire x1="49.6062" y1="3.3528" x2="49.6062" y2="2.8956" width="0.1524" layer="16"/>
+<wire x1="48.6918" y1="4.2672" x2="49.6062" y2="3.3528" width="0.1524" layer="16"/>
+<wire x1="48.9966" y1="4.572" x2="48.6918" y2="4.2672" width="0.1524" layer="1"/>
+<wire x1="49.4538" y1="4.572" x2="48.9966" y2="4.572" width="0.1524" layer="1"/>
+<wire x1="48.4632" y1="2.5146" x2="48.42" y2="2.44" width="0.1524" layer="1"/>
+<wire x1="49.4538" y1="4.572" x2="49.5325" y2="4.57" width="0.1524" layer="1"/>
+<via x="49.6062" y="2.8956" extent="1-16" drill="0.35"/>
+<via x="48.6918" y="4.2672" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$9">
 <contactref element="T1" pad="2"/>
 <contactref element="J3" pad="01"/>
 <contactref element="J5" pad="01"/>
-<wire x1="61.82" y1="12.13" x2="43.83555" y2="29.49" width="0" layer="19" extent="1-1"/>
-<wire x1="44.57" y1="7.9585" x2="61.82" y2="12.13" width="0" layer="19" extent="1-1"/>
+<wire x1="56.9976" y1="15.0876" x2="57.4548" y2="15.0876" width="0.1524" layer="16"/>
+<wire x1="55.3212" y1="16.764" x2="56.9976" y2="15.0876" width="0.1524" layer="16"/>
+<wire x1="54.483" y1="16.764" x2="55.3212" y2="16.764" width="0.1524" layer="16"/>
+<wire x1="44.2722" y1="26.9748" x2="47.3583" y2="23.8887" width="0.1524" layer="16"/>
+<wire x1="47.3583" y1="23.8887" x2="54.483" y2="16.764" width="0.1524" layer="16"/>
+<wire x1="44.2722" y1="28.4226" x2="44.2722" y2="26.9748" width="0.1524" layer="16"/>
+<wire x1="43.815" y1="28.8798" x2="44.2722" y2="28.4226" width="0.1524" layer="16"/>
+<wire x1="43.815" y1="29.0322" x2="43.815" y2="28.8798" width="0.1524" layer="16"/>
+<wire x1="43.5102" y1="29.337" x2="43.815" y2="29.0322" width="0.1524" layer="16"/>
+<wire x1="57.4548" y1="15.0876" x2="57.47" y2="15.08" width="0.1524" layer="16"/>
+<wire x1="43.5102" y1="29.337" x2="43.5056875" y2="29.39" width="0.1524" layer="16"/>
+<wire x1="44.577" y1="8.4582" x2="44.577" y2="8.001" width="0.1524" layer="16"/>
+<wire x1="44.7294" y1="8.6106" x2="44.577" y2="8.4582" width="0.1524" layer="16"/>
+<wire x1="44.7294" y1="8.9154" x2="44.7294" y2="8.6106" width="0.1524" layer="16"/>
+<wire x1="44.8818" y1="9.0678" x2="44.7294" y2="8.9154" width="0.1524" layer="16"/>
+<wire x1="44.8818" y1="12.6492" x2="44.8818" y2="9.0678" width="0.1524" layer="16"/>
+<wire x1="41.6814" y1="15.8496" x2="44.8818" y2="12.6492" width="0.1524" layer="16"/>
+<wire x1="40.6146" y1="15.8496" x2="41.6814" y2="15.8496" width="0.1524" layer="16"/>
+<wire x1="40.3098" y1="16.1544" x2="40.6146" y2="15.8496" width="0.1524" layer="16"/>
+<wire x1="40.3098" y1="16.8402" x2="40.3098" y2="16.1544" width="0.1524" layer="16"/>
+<wire x1="47.3583" y1="23.8887" x2="40.3098" y2="16.8402" width="0.1524" layer="16"/>
+<wire x1="44.577" y1="8.001" x2="44.57" y2="7.9585" width="0.1524" layer="16"/>
 </signal>
 <signal name="N$10">
 <contactref element="J3" pad="02"/>
 <contactref element="T2" pad="2"/>
-<wire x1="54.61" y1="2.8785" x2="59.28" y2="12.13" width="0" layer="19" extent="1-1"/>
+<wire x1="54.9402" y1="14.859" x2="54.9402" y2="15.0114" width="0.1524" layer="16"/>
+<wire x1="56.0832" y1="13.716" x2="54.9402" y2="14.859" width="0.1524" layer="16"/>
+<wire x1="56.0832" y1="4.6482" x2="56.0832" y2="13.716" width="0.1524" layer="16"/>
+<wire x1="55.0164" y1="3.5814" x2="56.0832" y2="4.6482" width="0.1524" layer="16"/>
+<wire x1="55.0164" y1="3.5052" x2="55.0164" y2="3.5814" width="0.1524" layer="16"/>
+<wire x1="54.6354" y1="3.1242" x2="55.0164" y2="3.5052" width="0.1524" layer="16"/>
+<wire x1="54.6354" y1="2.8956" x2="54.6354" y2="3.1242" width="0.1524" layer="16"/>
+<wire x1="54.9402" y1="15.0114" x2="54.93" y2="15.08" width="0.1524" layer="16"/>
+<wire x1="54.6354" y1="2.8956" x2="54.61" y2="2.8785" width="0.1524" layer="16"/>
 </signal>
 <signal name="GND" class="1">
 <contactref element="C5" pad="G"/>
@@ -1987,70 +2130,165 @@ design rules under a new name.</description>
 <contactref element="C6" pad="S"/>
 <contactref element="C6" pad="G"/>
 <contactref element="B1" pad="P$2"/>
-<wire x1="82.08" y1="6.57" x2="83.38" y2="22.42" width="0" layer="19" extent="1-1"/>
-<wire x1="46.85" y1="9.625" x2="83.38" y2="22.42" width="0" layer="19" extent="1-1"/>
-<wire x1="16.98" y1="21.22" x2="46.85" y2="9.625" width="0" layer="19" extent="1-1"/>
-<wire x1="15.68" y1="5.37" x2="16.98" y2="21.22" width="0" layer="19" extent="1-1"/>
+<polygon width="0.1524" layer="1">
+<vertex x="-4.8" y="37.05"/>
+<vertex x="101.25" y="37.05"/>
+<vertex x="101.35" y="36.95"/>
+<vertex x="101.35" y="-1.95"/>
+<vertex x="100.5" y="-2.8"/>
+<vertex x="-2.85" y="-2.8"/>
+<vertex x="-3.3" y="-2.35"/>
+<vertex x="-4.9" y="-0.75"/>
+<vertex x="-4.9" y="37.15"/>
+</polygon>
+<polygon width="0.1524" layer="16">
+<vertex x="99" y="34.7"/>
+<vertex x="99.8" y="33.9"/>
+<vertex x="99.8" y="-0.7"/>
+<vertex x="100.25" y="-1.15"/>
+<vertex x="-2.6" y="-1.15"/>
+<vertex x="-2.8" y="-0.95"/>
+<vertex x="-2.8" y="34.85"/>
+<vertex x="-2.6" y="35.05"/>
+</polygon>
 </signal>
 <signal name="N$14">
 <contactref element="Q1" pad="3"/>
 <contactref element="J1" pad="01"/>
-<wire x1="43.28" y1="12.2578" x2="61.82" y2="15.08" width="0" layer="19" extent="1-1"/>
+<wire x1="57.4548" y1="13.1064" x2="57.4548" y2="12.2682" width="0.1524" layer="16"/>
+<wire x1="56.0832" y1="14.478" x2="57.4548" y2="13.1064" width="0.1524" layer="16"/>
+<wire x1="56.0832" y1="15.5448" x2="56.0832" y2="14.478" width="0.1524" layer="16"/>
+<wire x1="55.3974" y1="16.2306" x2="56.0832" y2="15.5448" width="0.1524" layer="16"/>
+<wire x1="47.7012" y1="16.2306" x2="55.3974" y2="16.2306" width="0.1524" layer="16"/>
+<wire x1="45.1866" y1="13.716" x2="47.7012" y2="16.2306" width="0.1524" layer="16"/>
+<wire x1="43.7388" y1="12.2682" x2="45.1866" y2="13.716" width="0.1524" layer="1"/>
+<wire x1="43.2816" y1="12.2682" x2="43.7388" y2="12.2682" width="0.1524" layer="1"/>
+<wire x1="57.4548" y1="12.2682" x2="57.47" y2="12.23" width="0.1524" layer="16"/>
+<wire x1="43.2816" y1="12.2682" x2="43.28" y2="12.2578" width="0.1524" layer="1"/>
+<via x="45.1866" y="13.716" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$8">
 <contactref element="J4" pad="01"/>
 <contactref element="J12" pad="02"/>
 <contactref element="C1" pad="1"/>
 <contactref element="R1" pad="1"/>
-<wire x1="55.13" y1="17.98" x2="37.6994375" y2="29.39" width="0" layer="19" extent="1-1"/>
-<wire x1="39.82" y1="17.27" x2="55.13" y2="17.98" width="0" layer="19" extent="1-1"/>
-<wire x1="37.53" y1="17.4" x2="39.82" y2="17.27" width="0" layer="19" extent="1-1"/>
+<wire x1="39.7002" y1="17.3736" x2="38.3286" y2="17.3736" width="0.1524" layer="1"/>
+<wire x1="38.3286" y1="17.3736" x2="37.4904" y2="17.3736" width="0.1524" layer="1"/>
+<wire x1="37.4904" y1="17.3736" x2="37.455" y2="17.3558" width="0.1524" layer="1"/>
+<wire x1="39.7002" y1="17.3736" x2="39.715" y2="17.3558" width="0.1524" layer="1"/>
+<wire x1="38.3286" y1="28.4226" x2="38.3286" y2="28.3464" width="0.1524" layer="16"/>
+<wire x1="38.3286" y1="28.3464" x2="38.3286" y2="17.3736" width="0.1524" layer="16"/>
+<wire x1="37.5666" y1="29.1846" x2="38.3286" y2="28.4226" width="0.1524" layer="16"/>
+<wire x1="37.5666" y1="29.337" x2="37.5666" y2="29.1846" width="0.1524" layer="16"/>
+<wire x1="37.5666" y1="29.337" x2="37.534825" y2="29.39" width="0.1524" layer="16"/>
+<wire x1="54.864" y1="18.2118" x2="54.864" y2="17.9832" width="0.1524" layer="16"/>
+<wire x1="44.8056" y1="28.2702" x2="54.864" y2="18.2118" width="0.1524" layer="16"/>
+<wire x1="44.8056" y1="29.8704" x2="44.8056" y2="28.2702" width="0.1524" layer="16"/>
+<wire x1="43.9674" y1="30.7086" x2="44.8056" y2="29.8704" width="0.1524" layer="16"/>
+<wire x1="40.6908" y1="30.7086" x2="43.9674" y2="30.7086" width="0.1524" layer="16"/>
+<wire x1="38.3286" y1="28.3464" x2="40.6908" y2="30.7086" width="0.1524" layer="16"/>
+<wire x1="54.864" y1="17.9832" x2="54.93" y2="17.93" width="0.1524" layer="16"/>
+<via x="38.3286" y="17.3736" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$16">
 <contactref element="J11" pad="01"/>
 <contactref element="J10" pad="02"/>
 <contactref element="C2" pad="1"/>
 <contactref element="R3" pad="1"/>
-<wire x1="39.61" y1="19.67" x2="54.93" y2="20.78" width="0" layer="19" extent="1-1"/>
-<wire x1="37.38" y1="19.45" x2="39.61" y2="19.67" width="0" layer="19" extent="1-1"/>
-<wire x1="31.68" y1="29.44" x2="37.38" y2="19.45" width="0" layer="19" extent="1-1"/>
+<wire x1="39.7002" y1="19.5072" x2="37.4904" y2="19.5072" width="0.1524" layer="1"/>
+<wire x1="37.4904" y1="19.5072" x2="37.455" y2="19.5392" width="0.1524" layer="1"/>
+<wire x1="39.7002" y1="19.5072" x2="39.715" y2="19.5392" width="0.1524" layer="1"/>
+<wire x1="37.4904" y1="23.1648" x2="37.4904" y2="19.5834" width="0.1524" layer="1"/>
+<wire x1="31.623" y1="29.0322" x2="37.4904" y2="23.1648" width="0.1524" layer="1"/>
+<wire x1="31.623" y1="29.337" x2="31.623" y2="29.0322" width="0.1524" layer="1"/>
+<wire x1="37.4904" y1="19.5834" x2="37.455" y2="19.5392" width="0.1524" layer="1"/>
+<wire x1="31.623" y1="29.337" x2="31.5639625" y2="29.39" width="0.1524" layer="1"/>
+<wire x1="54.7116" y1="20.8026" x2="54.864" y2="20.8026" width="0.1524" layer="16"/>
+<wire x1="44.5008" y1="31.0134" x2="54.7116" y2="20.8026" width="0.1524" layer="16"/>
+<wire x1="33.3756" y1="31.0134" x2="44.5008" y2="31.0134" width="0.1524" layer="16"/>
+<wire x1="31.7754" y1="29.4132" x2="33.3756" y2="31.0134" width="0.1524" layer="16"/>
+<wire x1="31.623" y1="29.4132" x2="31.7754" y2="29.4132" width="0.1524" layer="16"/>
+<wire x1="54.864" y1="20.8026" x2="54.93" y2="20.78" width="0.1524" layer="16"/>
+<wire x1="31.623" y1="29.4132" x2="31.5639625" y2="29.39" width="0.1524" layer="16"/>
 </signal>
 <signal name="N$15">
 <contactref element="C1" pad="2"/>
 <contactref element="C6" pad="R"/>
-<wire x1="21.08" y1="9.32" x2="36.53" y2="17.4" width="0" layer="19" extent="1-1"/>
+<wire x1="31.4706" y1="17.3736" x2="36.4236" y2="17.3736" width="0.1524" layer="1"/>
+<wire x1="29.8704" y1="15.7734" x2="31.4706" y2="17.3736" width="0.1524" layer="1"/>
+<wire x1="24.0792" y1="9.9822" x2="29.8704" y2="15.7734" width="0.1524" layer="16"/>
+<wire x1="22.6314" y1="9.9822" x2="24.0792" y2="9.9822" width="0.1524" layer="16"/>
+<wire x1="22.0218" y1="9.3726" x2="22.6314" y2="9.9822" width="0.1524" layer="16"/>
+<wire x1="21.1074" y1="9.3726" x2="22.0218" y2="9.3726" width="0.1524" layer="16"/>
+<wire x1="36.4236" y1="17.3736" x2="36.455" y2="17.3558" width="0.1524" layer="1"/>
+<wire x1="21.1074" y1="9.3726" x2="21.08" y2="9.32" width="0.1524" layer="16"/>
+<via x="29.8704" y="15.7734" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$13">
 <contactref element="C2" pad="2"/>
 <contactref element="C6" pad="T"/>
-<wire x1="36.38" y1="19.45" x2="21.08" y2="22.22" width="0" layer="19" extent="1-1"/>
+<wire x1="31.0896" y1="19.5072" x2="36.4236" y2="19.5072" width="0.1524" layer="1"/>
+<wire x1="28.4226" y1="22.1742" x2="31.0896" y2="19.5072" width="0.1524" layer="1"/>
+<wire x1="22.479" y1="22.1742" x2="28.4226" y2="22.1742" width="0.1524" layer="1"/>
+<wire x1="22.3266" y1="22.3266" x2="22.479" y2="22.1742" width="0.1524" layer="1"/>
+<wire x1="21.1836" y1="22.3266" x2="22.3266" y2="22.3266" width="0.1524" layer="1"/>
+<wire x1="21.1074" y1="22.2504" x2="21.1836" y2="22.3266" width="0.1524" layer="1"/>
+<wire x1="36.4236" y1="19.5072" x2="36.455" y2="19.5392" width="0.1524" layer="1"/>
+<wire x1="21.1074" y1="22.2504" x2="21.08" y2="22.22" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$17">
 <contactref element="C3" pad="1"/>
 <contactref element="C5" pad="T"/>
-<wire x1="62.28" y1="20.6" x2="77.98" y2="5.57" width="0" layer="19" extent="1-1"/>
+<wire x1="63.627" y1="20.574" x2="62.484" y2="20.574" width="0.1524" layer="1"/>
+<wire x1="65.532" y1="18.669" x2="63.627" y2="20.574" width="0.1524" layer="1"/>
+<wire x1="77.9526" y1="6.2484" x2="65.532" y2="18.669" width="0.1524" layer="16"/>
+<wire x1="77.9526" y1="5.6388" x2="77.9526" y2="6.2484" width="0.1524" layer="16"/>
+<wire x1="62.484" y1="20.574" x2="62.43" y2="20.6" width="0.1524" layer="1"/>
+<wire x1="77.9526" y1="5.6388" x2="77.98" y2="5.57" width="0.1524" layer="16"/>
+<via x="65.532" y="18.669" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$12">
 <contactref element="C4" pad="1"/>
 <contactref element="C5" pad="R"/>
-<wire x1="62.58" y1="18.05" x2="77.98" y2="18.47" width="0" layer="19" extent="1-1"/>
+<wire x1="69.5706" y1="18.0594" x2="62.484" y2="18.0594" width="0.1524" layer="1"/>
+<wire x1="73.6092" y1="22.098" x2="69.5706" y2="18.0594" width="0.1524" layer="1"/>
+<wire x1="75.2094" y1="22.098" x2="73.6092" y2="22.098" width="0.1524" layer="1"/>
+<wire x1="77.9526" y1="19.3548" x2="75.2094" y2="22.098" width="0.1524" layer="1"/>
+<wire x1="77.9526" y1="18.5166" x2="77.9526" y2="19.3548" width="0.1524" layer="1"/>
+<wire x1="62.484" y1="18.0594" x2="62.43" y2="18.05" width="0.1524" layer="1"/>
+<wire x1="77.9526" y1="18.5166" x2="77.98" y2="18.47" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$11">
 <contactref element="J10" pad="01"/>
 <contactref element="C3" pad="2"/>
-<wire x1="61.28" y1="20.6" x2="57.47" y2="20.78" width="0" layer="19" extent="1-1"/>
+<wire x1="57.6834" y1="20.574" x2="61.4172" y2="20.574" width="0.1524" layer="1"/>
+<wire x1="57.531" y1="20.7264" x2="57.6834" y2="20.574" width="0.1524" layer="1"/>
+<wire x1="61.4172" y1="20.574" x2="61.43" y2="20.6" width="0.1524" layer="1"/>
+<wire x1="57.531" y1="20.7264" x2="57.47" y2="20.78" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$18">
 <contactref element="J12" pad="01"/>
 <contactref element="C4" pad="2"/>
-<wire x1="57.67" y1="17.98" x2="61.58" y2="18.05" width="0" layer="19" extent="1-1"/>
+<wire x1="57.6072" y1="18.0594" x2="61.4172" y2="18.0594" width="0.1524" layer="1"/>
+<wire x1="57.531" y1="17.9832" x2="57.6072" y2="18.0594" width="0.1524" layer="1"/>
+<wire x1="61.4172" y1="18.0594" x2="61.43" y2="18.05" width="0.1524" layer="1"/>
+<wire x1="57.531" y1="17.9832" x2="57.47" y2="17.93" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$19" class="1">
 <contactref element="J1" pad="02"/>
 <contactref element="U1" pad="6"/>
 <contactref element="J2" pad="01"/>
-<wire x1="59.28" y1="15.08" x2="61.013325" y2="29.49" width="0" layer="19" extent="1-1"/>
-<wire x1="51.875" y1="7.23" x2="59.28" y2="15.08" width="0" layer="19" extent="1-1"/>
+<wire x1="51.2826" y1="8.6106" x2="51.2826" y2="8.3058" width="0.2" layer="1"/>
+<wire x1="54.864" y1="12.192" x2="51.2826" y2="8.6106" width="0.2" layer="1"/>
+<wire x1="51.2826" y1="8.3058" x2="51.27" y2="8.23" width="0.2" layer="1"/>
+<wire x1="54.864" y1="12.192" x2="54.93" y2="12.23" width="0.2" layer="1"/>
+<wire x1="61.4172" y1="29.1846" x2="61.4172" y2="29.337" width="0.2" layer="1"/>
+<wire x1="56.1594" y1="23.9268" x2="61.4172" y2="29.1846" width="0.2" layer="1"/>
+<wire x1="56.1594" y1="13.6398" x2="56.1594" y2="23.9268" width="0.2" layer="1"/>
+<wire x1="55.0164" y1="12.4968" x2="56.1594" y2="13.6398" width="0.2" layer="1"/>
+<wire x1="55.0164" y1="12.2682" x2="55.0164" y2="12.4968" width="0.2" layer="1"/>
+<wire x1="61.4172" y1="29.337" x2="61.418275" y2="29.39" width="0.2" layer="1"/>
+<wire x1="55.0164" y1="12.2682" x2="54.93" y2="12.23" width="0.2" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

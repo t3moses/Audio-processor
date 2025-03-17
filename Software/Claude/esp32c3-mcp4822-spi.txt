@@ -1,0 +1,133 @@
+#include "driver/spi_master.h"
+#include "driver/gpio.h"
+#include "esp_log.h"
+
+#define PIN_NUM_MISO -1     // MCP4822 doesn't use MISO
+#define PIN_NUM_MOSI 7      // GPIO pin connected to SDI (MOSI)
+#define PIN_NUM_CLK  6      // GPIO pin connected to SCK
+#define PIN_NUM_CS   10     // GPIO pin connected to CS
+
+static const char *TAG = "mcp4822";
+static spi_device_handle_t spi_dev;
+
+/**
+ * Initialize the SPI for communication with MCP4822
+ */
+esp_err_t mcp4822_init(void) {
+    esp_err_t ret;
+    
+    // Configuration for the SPI bus
+    spi_bus_config_t bus_cfg = {
+        .miso_io_num = PIN_NUM_MISO,  // Not used by MCP4822
+        .mosi_io_num = PIN_NUM_MOSI,
+        .sclk_io_num = PIN_NUM_CLK,
+        .quadwp_io_num = -1,
+        .quadhd_io_num = -1,
+        .max_transfer_sz = 32,
+    };
+    
+    // Configuration for the SPI device on the bus
+    spi_device_interface_config_t dev_cfg = {
+        .clock_speed_hz = 20*1000*1000,   // 20 MHz - MCP4822 supports up to 20MHz
+        .mode = 0,                        // SPI mode 0 (CPOL=0, CPHA=0)
+        .spics_io_num = PIN_NUM_CS,       // CS pin
+        .queue_size = 1,                  // We want to be able to queue 1 transaction
+        .command_bits = 0,
+        .address_bits = 0,
+        .dummy_bits = 0,
+    };
+    
+    // Initialize the SPI bus
+    ret = spi_bus_initialize(SPI2_HOST, &bus_cfg, SPI_DMA_CH_AUTO);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to initialize SPI bus: %d", ret);
+        return ret;
+    }
+    
+    // Add the MCP4822 device to the SPI bus
+    ret = spi_bus_add_device(SPI2_HOST, &dev_cfg, &spi_dev);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to add device to SPI bus: %d", ret);
+        return ret;
+    }
+    
+    ESP_LOGI(TAG, "MCP4822 SPI initialized successfully");
+    return ESP_OK;
+}
+
+/**
+ * Send data to MCP4822 DAC
+ * 
+ * @param channel Select DAC channel (0 for DAC A, 1 for DAC B)
+ * @param gain Set gain (0 for 2x gain, 1 for 1x gain)
+ * @param value 12-bit value to be sent to the DAC (0-4095)
+ * @return ESP_OK on success
+ */
+esp_err_t mcp4822_write(uint8_t channel, uint8_t gain, uint16_t value) {
+    esp_err_t ret;
+    
+    // Validate input parameters
+    if (channel > 1) {
+        ESP_LOGE(TAG, "Invalid channel: %d (should be 0 or 1)", channel);
+        return ESP_ERR_INVALID_ARG;
+    }
+    
+    if (value > 4095) {
+        ESP_LOGW(TAG, "DAC value exceeds 12-bit range: %d (max 4095)", value);
+        value = 4095;  // Clamp to maximum value
+    }
+    
+    // Prepare the 16-bit command for MCP4822
+    uint16_t data = 0;
+    data |= (channel & 0x01) << 15;   // Channel select bit (A=0, B=1) in bit 15
+    data |= ((!gain) & 0x01) << 13;   // Gain select bit (1x=1, 2x=0) in bit 13
+    data |= (1 << 12);                // SHDN bit - active (1)
+    data |= (value & 0x0FFF);         // 12-bit DAC value in bits 0-11
+    
+    // Convert to big-endian (network byte order) as required by MCP4822
+    data = SPI_SWAP_DATA_TX(data, 16);
+    
+    // Create transaction
+    spi_transaction_t t = {
+        .length = 16,      // 16 bits
+        .tx_buffer = &data,
+        .rx_buffer = NULL  // We're not reading anything
+    };
+    
+    // Transmit
+    ret = spi_device_transmit(spi_dev, &t);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "SPI transmission failed: %d", ret);
+        return ret;
+    }
+    
+    ESP_LOGD(TAG, "Sent to MCP4822: channel=%d, gain=%d, value=%d", channel, gain, value);
+    return ESP_OK;
+}
+
+/**
+ * Helper function to set voltage on a specific channel
+ * 
+ * @param channel DAC channel (0 for A, 1 for B)
+ * @param voltage Voltage to set (0.0 to 4.095V with 1x gain, 0.0 to 2.048V with 2x gain)
+ * @param use_2x_gain Whether to use 2x gain (true) or 1x gain (false)
+ * @return ESP_OK on success
+ */
+esp_err_t mcp4822_set_voltage(uint8_t channel, float voltage, bool use_2x_gain) {
+    float max_voltage = use_2x_gain ? 2.048f : 4.095f;
+    
+    // Clamp voltage to valid range
+    if (voltage < 0.0f) {
+        ESP_LOGW(TAG, "Voltage below minimum (0.0V), clamping to 0.0V");
+        voltage = 0.0f;
+    } else if (voltage > max_voltage) {
+        ESP_LOGW(TAG, "Voltage exceeds maximum (%.3fV), clamping to %.3fV", max_voltage, max_voltage);
+        voltage = max_voltage;
+    }
+    
+    // Calculate 12-bit value from voltage
+    uint16_t value = (uint16_t)((voltage / max_voltage) * 4095.0f + 0.5f);
+    
+    // Send to DAC
+    return mcp4822_write(channel, !use_2x_gain, value);  // Note: gain bit is inverted in the mcp4822_write function
+}

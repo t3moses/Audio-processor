@@ -143,11 +143,11 @@
 <board>
 <plain>
 <wire x1="0" y1="0" x2="100" y2="0" width="0" layer="20"/>
-<wire x1="100" y1="0" x2="98.5" y2="32.8" width="0" layer="20"/>
-<wire x1="98.5" y1="32.8" x2="-1.5" y2="32.8" width="0" layer="20"/>
-<wire x1="-1.5" y1="32.8" x2="0" y2="0" width="0" layer="20"/>
-<text x="0.95" y="15.05" size="1.778" layer="25" rot="R270">IN</text>
-<text x="97.5" y="11.45" size="1.778" layer="25" rot="R90">OUT</text>
+<wire x1="100" y1="0" x2="100" y2="32" width="0" layer="20"/>
+<wire x1="100" y1="32" x2="0" y2="32" width="0" layer="20"/>
+<wire x1="0" y1="32" x2="0" y2="0" width="0" layer="20"/>
+<text x="3.9" y="30.5" size="1.778" layer="25" rot="R180">IN</text>
+<text x="97.85" y="30.3" size="1.778" layer="25" rot="R180">OUT</text>
 <text x="26.65" y="28.242" size="1.778" layer="25">T</text>
 <text x="48.07155625" y="23.8" size="1.778" layer="25">0V</text>
 <text x="53.38063125" y="23.8" size="1.778" layer="25">2V5</text>
