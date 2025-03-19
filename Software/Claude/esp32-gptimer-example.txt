@@ -1,0 +1,199 @@
+#include "driver/gptimer.h"
+#include "esp_log.h"
+
+static const char *TAG = "gptimer_example";
+
+// Callback function for timer events
+static bool IRAM_ATTR timer_on_alarm_cb(gptimer_handle_t timer, const gptimer_alarm_event_data_t *edata, void *user_data) {
+    // Get the timer number from user data
+    int timer_idx = *(int *)user_data;
+    
+    // Log message to indicate the callback is executed
+    ESP_LOGI(TAG, "Timer %d alarm event", timer_idx);
+    
+    // Return true to keep the timer running (in auto-reload mode)
+    return true;
+}
+
+/**
+ * Configure a gptimer instance
+ * 
+ * @param timer_num An identifier for the timer (for user reference)
+ * @param interval_ms Interval in milliseconds
+ * @param auto_reload Whether timer should auto-reload after alarm
+ * @return gptimer_handle_t Handle to the created timer or NULL on error
+ */
+gptimer_handle_t configure_gptimer(int timer_num, uint32_t interval_ms, bool auto_reload) {
+    gptimer_handle_t gptimer = NULL;
+    
+    // Timer configuration
+    gptimer_config_t timer_config = {
+        .clk_src = GPTIMER_CLK_SRC_DEFAULT,  // Default clock source (usually APB clock)
+        .direction = GPTIMER_COUNT_UP,       // Count up
+        .resolution_hz = 1000000,            // 1 MHz, 1 tick = 1 microsecond
+    };
+    
+    // Create timer instance
+    ESP_LOGI(TAG, "Creating GPTimer %d", timer_num);
+    esp_err_t ret = gptimer_new_timer(&timer_config, &gptimer);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to create gptimer: %s", esp_err_to_name(ret));
+        return NULL;
+    }
+    
+    // Allocate memory for user data (to store timer number)
+    int *timer_user_data = malloc(sizeof(int));
+    if (timer_user_data == NULL) {
+        ESP_LOGE(TAG, "Failed to allocate memory for user data");
+        gptimer_del_timer(gptimer);
+        return NULL;
+    }
+    *timer_user_data = timer_num;
+    
+    // Set up alarm callback
+    gptimer_event_callbacks_t cbs = {
+        .on_alarm = timer_on_alarm_cb,
+    };
+    ret = gptimer_register_event_callbacks(gptimer, &cbs, timer_user_data);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to register callback: %s", esp_err_to_name(ret));
+        free(timer_user_data);
+        gptimer_del_timer(gptimer);
+        return NULL;
+    }
+    
+    // Calculate the alarm value from milliseconds
+    uint64_t alarm_value = (uint64_t)interval_ms * 1000; // Convert to microseconds
+    
+    // Set up alarm configuration
+    gptimer_alarm_config_t alarm_config = {
+        .alarm_count = alarm_value,    // Alarm value in microseconds
+        .reload_count = 0,             // Value to reload after alarm
+        .flags.auto_reload_on_alarm = auto_reload, // Auto reload configuration
+    };
+    
+    // Set alarm configuration
+    ret = gptimer_set_alarm_action(gptimer, &alarm_config);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to set alarm action: %s", esp_err_to_name(ret));
+        free(timer_user_data);
+        gptimer_del_timer(gptimer);
+        return NULL;
+    }
+    
+    // Enable the timer
+    ret = gptimer_enable(gptimer);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to enable timer: %s", esp_err_to_name(ret));
+        free(timer_user_data);
+        gptimer_del_timer(gptimer);
+        return NULL;
+    }
+    
+    return gptimer;
+}
+
+/**
+ * Start a configured gptimer
+ * 
+ * @param timer The timer handle
+ * @return ESP_OK on success, error code otherwise
+ */
+esp_err_t start_gptimer(gptimer_handle_t timer) {
+    if (timer == NULL) {
+        return ESP_ERR_INVALID_ARG;
+    }
+    
+    esp_err_t ret = gptimer_start(timer);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to start timer: %s", esp_err_to_name(ret));
+    } else {
+        ESP_LOGI(TAG, "Timer started successfully");
+    }
+    
+    return ret;
+}
+
+/**
+ * Stop a gptimer
+ * 
+ * @param timer The timer handle
+ * @return ESP_OK on success, error code otherwise
+ */
+esp_err_t stop_gptimer(gptimer_handle_t timer) {
+    if (timer == NULL) {
+        return ESP_ERR_INVALID_ARG;
+    }
+    
+    esp_err_t ret = gptimer_stop(timer);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to stop timer: %s", esp_err_to_name(ret));
+    } else {
+        ESP_LOGI(TAG, "Timer stopped successfully");
+    }
+    
+    return ret;
+}
+
+/**
+ * Cleanup a gptimer instance
+ * 
+ * @param timer The timer handle
+ * @return ESP_OK on success, error code otherwise
+ */
+esp_err_t cleanup_gptimer(gptimer_handle_t timer) {
+    if (timer == NULL) {
+        return ESP_ERR_INVALID_ARG;
+    }
+    
+    // Get the user data (to free it)
+    void *user_data = NULL;
+    gptimer_get_callback_user_data(timer, &user_data);
+    
+    // Disable timer
+    esp_err_t ret = gptimer_disable(timer);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to disable timer: %s", esp_err_to_name(ret));
+        return ret;
+    }
+    
+    // Delete timer instance
+    ret = gptimer_del_timer(timer);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to delete timer: %s", esp_err_to_name(ret));
+        return ret;
+    }
+    
+    // Free user data if it exists
+    if (user_data != NULL) {
+        free(user_data);
+    }
+    
+    ESP_LOGI(TAG, "Timer cleanup completed successfully");
+    return ESP_OK;
+}
+
+// Example usage
+void app_main(void) {
+    // Configure two timers:
+    // - Timer 1: 1000ms interval, auto-reload enabled
+    // - Timer 2: 500ms interval, auto-reload enabled
+    gptimer_handle_t timer1 = configure_gptimer(1, 1000, true);
+    gptimer_handle_t timer2 = configure_gptimer(2, 500, true);
+    
+    if (timer1 != NULL && timer2 != NULL) {
+        // Start both timers
+        start_gptimer(timer1);
+        start_gptimer(timer2);
+        
+        // Let timers run for 10 seconds
+        vTaskDelay(pdMS_TO_TICKS(10000));
+        
+        // Stop and clean up both timers
+        stop_gptimer(timer1);
+        stop_gptimer(timer2);
+        
+        cleanup_gptimer(timer1);
+        cleanup_gptimer(timer2);
+    }
+}

@@ -1,0 +1,92 @@
+Here's a complete usage example for `esp_timer` on ESP32:
+
+```cpp
+#include "esp_timer.h"
+
+const int LED_PIN = 2;  // Onboard LED on most ESP32 dev boards
+esp_timer_handle_t periodicTimer;
+esp_timer_handle_t oneShotTimer;
+
+// Callback function for periodic timer
+void periodicTimerCallback(void* arg) {
+  static int count = 0;
+  count++;
+  digitalWrite(LED_PIN, !digitalRead(LED_PIN));  // Toggle LED
+  Serial.printf("Periodic timer triggered %d times\n", count);
+}
+
+// Callback function for one-shot timer
+void oneShotTimerCallback(void* arg) {
+  Serial.println("One-shot timer triggered!");
+}
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(LED_PIN, OUTPUT);
+  
+  // Create periodic timer configuration
+  esp_timer_create_args_t periodicTimerConfig;
+  periodicTimerConfig.callback = &periodicTimerCallback;
+  periodicTimerConfig.arg = NULL;
+  periodicTimerConfig.dispatch_method = ESP_TIMER_TASK;
+  periodicTimerConfig.name = "periodic_timer";
+  
+  // Create one-shot timer configuration
+  esp_timer_create_args_t oneShotTimerConfig;
+  oneShotTimerConfig.callback = &oneShotTimerCallback;
+  oneShotTimerConfig.arg = NULL;
+  oneShotTimerConfig.dispatch_method = ESP_TIMER_TASK;
+  oneShotTimerConfig.name = "one_shot_timer";
+  
+  // Create timers
+  ESP_ERROR_CHECK(esp_timer_create(&periodicTimerConfig, &periodicTimer));
+  ESP_ERROR_CHECK(esp_timer_create(&oneShotTimerConfig, &oneShotTimer));
+  
+  // Start periodic timer (1 second interval)
+  ESP_ERROR_CHECK(esp_timer_start_periodic(periodicTimer, 1000000));  // Time in microseconds
+  
+  // Start one-shot timer (5 second delay)
+  ESP_ERROR_CHECK(esp_timer_start_once(oneShotTimer, 5000000));  // Time in microseconds
+  
+  Serial.println("Timers started");
+}
+
+void loop() {
+  // Report timer statistics every 10 seconds
+  static unsigned long lastReport = 0;
+  if (millis() - lastReport >= 10000) {
+    esp_timer_dump(stdout);
+    lastReport = millis();
+    
+    // Restart one-shot timer
+    ESP_ERROR_CHECK(esp_timer_start_once(oneShotTimer, 5000000));
+  }
+  
+  // Your main code can run here without being affected by the timers
+  delay(100);
+}
+```
+
+This example demonstrates:
+
+1. **Creating two timers**:
+   - A periodic timer that toggles an LED every second
+   - A one-shot timer that triggers once after 5 seconds
+
+2. **Timer callbacks**:
+   - Each timer has its own callback function
+   - The periodic callback keeps count of how many times it's been triggered
+   - Both callbacks print messages to the Serial monitor
+
+3. **Timer management**:
+   - Error checking with `ESP_ERROR_CHECK`
+   - Timer statistics dumping with `esp_timer_dump`
+   - Restarting the one-shot timer every 10 seconds
+
+4. **Key esp_timer functions**:
+   - `esp_timer_create` - Creates a timer with specified configuration
+   - `esp_timer_start_periodic` - Starts a repeating timer
+   - `esp_timer_start_once` - Starts a one-shot timer
+   - `esp_timer_dump` - Outputs timer statistics
+
+The advantage of using `esp_timer` over Arduino's standard timing functions is that these hardware timers run independently of your main loop and provide more precise timing.

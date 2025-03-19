@@ -23,13 +23,15 @@
 
       void v_setup_spi();
 
-      void v_set_up_adc();
+      void v_setup_adc();
 
-      void v_set_up_dac();
+      void v_setup_dac();
 
       void v_setup_timers();
 
-      static void IRAM_ATTR timer_group0_handler( volatile int timer_number );
+      static void IRAM_ATTR process_adc(void* arg);
+
+      static void IRAM_ATTR process_dac(void* arg);
 
       static void IRAM_ATTR left_adc_spi_pre_transfer_callback( spi_transaction_t* adc_transaction_spec );
 

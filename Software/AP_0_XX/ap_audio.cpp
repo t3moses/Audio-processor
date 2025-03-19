@@ -1,8 +1,8 @@
-
+#include "sdkconfig.h"
 #include "ap_constants.h"
 #include "ap_types.h"
 #include "ap_audio.h"
-#include "driver/timer.h"
+#include "esp_timer.h"
 #include "driver/gpio.h"
 
 volatile int16_t _i_pin_num_left_adc_cs; // Class-scope variables.
@@ -27,13 +27,7 @@ audio_sample_t sample;
 
 ap_audio::ap_audio() {}
 
-void IRAM_ATTR timer_group0_isr( void *para ) {
 
-  volatile int timer_no = ( int )para;
-
-  ap_audio::timer_group0_handler( timer_no );
-
-}
 
 void ap_audio::v_begin( spi_config_t* p_spi_config, adc_config_t* p_adc_config, dac_config_t* p_dac_config ) {
 
@@ -58,11 +52,12 @@ void ap_audio::v_begin( spi_config_t* p_spi_config, adc_config_t* p_adc_config, 
   _px_audio_sample = p_dac_config->px_audio_sample;
  
   ap_audio::v_setup_spi();
-  ap_audio::v_set_up_adc();
-  ap_audio::v_set_up_dac();
+  ap_audio::v_setup_adc();
+  ap_audio::v_setup_dac();
   ap_audio::v_setup_timers();
 
 }
+
 
 
 void ap_audio::v_setup_spi() {
@@ -76,7 +71,7 @@ esp_err_t return_code;
     .sclk_io_num = (gpio_num_t)_i_pin_num_clk,
     .quadwp_io_num = -1,
     .quadhd_io_num = -1,
-    .max_transfer_sz = ADC_PRECISION
+    .max_transfer_sz = 32,
 
   };
 
@@ -87,13 +82,13 @@ esp_err_t return_code;
 
 
 
-void ap_audio::v_set_up_adc() {
+void ap_audio::v_setup_adc() {
 
 esp_err_t return_code;
 
-// Configuration for the left channel ADC
+// config for the left channel ADC
 
-  spi_device_interface_config_t left_adc_spi_configuration = {
+  spi_device_interface_config_t left_adc_spi_config = {
 
     .command_bits = 0,
     .address_bits = 0,
@@ -107,9 +102,9 @@ esp_err_t return_code;
 
   };
 
-// Configuration for the right channel ADC
+// config for the right channel ADC
 
-  spi_device_interface_config_t right_adc_spi_configuration = {
+  spi_device_interface_config_t right_adc_spi_config = {
 
     .command_bits = 0,
     .address_bits = 0,
@@ -125,10 +120,12 @@ esp_err_t return_code;
 
 // Add the ADCs to the bus.
 
-  return_code = spi_bus_add_device( SPI_HOST, &left_adc_spi_configuration, &left_adc_spi_handle );
+  return_code = spi_bus_add_device( SPI_HOST, &left_adc_spi_config, &left_adc_spi_handle );
   ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then print an error message on the console, and call abort().
-  return_code = spi_bus_add_device( SPI_HOST, &right_adc_spi_configuration, &right_adc_spi_handle );
+  return_code = spi_bus_add_device( SPI_HOST, &right_adc_spi_config, &right_adc_spi_handle );
   ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then print an error message on the console, and call abort().
+
+// Set up the ADC SPI transaction spec and send it to the SPI host.
 
   memset( &adc_transaction_spec, 0, sizeof( adc_transaction_spec ));
   adc_transaction_spec.rxlength = 16;
@@ -144,7 +141,7 @@ esp_err_t return_code;
 
 
 
-void ap_audio::v_set_up_dac() {
+void ap_audio::v_setup_dac() {
 
 esp_err_t return_code;
 
@@ -176,8 +173,10 @@ esp_err_t return_code;
 
   return_code = spi_device_polling_transmit( dac_spi_handle, &dac_transaction_spec );
   ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then print an error message on the console, and call abort().
-  
-  gpio_set_level( (gpio_num_t)_i_pin_num_dac_ldac, 0);
+
+// Automatically transfer DAC input register contents to the corresponding output registers.
+
+  gpio_set_level( (gpio_num_t)_i_pin_num_dac_ldac, 0 );
 
 }
 
@@ -185,77 +184,47 @@ esp_err_t return_code;
 
 void ap_audio::v_setup_timers() {
 
-// TIMER_GROUP_0, TIMER_0 controls the left and right ADCs.
-// TIMER_GROUP_0, TIMER_1 controls the DAC.
+esp_err_t return_code;
 
-  timer_config_t timer_0_config = {
-    .alarm_en = TIMER_ALARM_EN,
-    .counter_en = TIMER_PAUSE,
-    .intr_type = TIMER_INTR_LEVEL,
-    .counter_dir = TIMER_COUNT_UP,
-    .auto_reload = TIMER_AUTORELOAD_EN,
-    .divider = SAMPLE_TIMER_DIVIDER
+// Set up timers for the ADC and DAC.
+
+esp_timer_handle_t adc_timer_handle;
+esp_timer_handle_t dac_timer_handle;
+
+uint64_t u64_adc_timer_interval_us = 10 * 1000 * 1000 / AUDIO_IN_SAMPLES_PER_SECOND;
+uint64_t u64_dac_timer_interval_us = 10 * 1000 * 1000 / AUDIO_OUT_SAMPLES_PER_SECOND;
+
+  const esp_timer_create_args_t adc_timer_config = {
+    .callback = &ap_audio::process_adc,
+    .dispatch_method = ESP_TIMER_ISR,
+    .name = "adc_timer",
   };
 
-  timer_config_t timer_1_config = {
-    .alarm_en = TIMER_ALARM_EN,
-    .counter_en = TIMER_PAUSE,
-    .intr_type = TIMER_INTR_LEVEL,
-    .counter_dir = TIMER_COUNT_UP,
-    .auto_reload = TIMER_AUTORELOAD_EN,
-    .divider = SAMPLE_TIMER_DIVIDER
+  const esp_timer_create_args_t dac_timer_config = {
+    .callback = &ap_audio::process_dac,
+    .name = "dac_timer",
   };
 
-  noInterrupts();
+  return_code = esp_timer_create( &adc_timer_config, &adc_timer_handle );
+  ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then an error message is printed on the console, and abort() is called.
+  return_code = esp_timer_stop( adc_timer_handle );
+  ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then an error message is printed on the console, and abort() is called.
+  return_code = esp_timer_start_periodic( adc_timer_handle, u64_adc_timer_interval_us );
+  ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then an error message is printed on the console, and abort() is called.
 
-  timer_init( TIMER_GROUP_0, TIMER_0, &timer_0_config );
-  timer_set_counter_value( TIMER_GROUP_0, TIMER_0, 0x00000000ULL );
-  timer_set_alarm_value( TIMER_GROUP_0, TIMER_0, TICKS_PER_AUDIO_IN_SAMPLE );
-  timer_enable_intr( TIMER_GROUP_0, TIMER_0 );
-  timer_isr_register( TIMER_GROUP_0, TIMER_0, timer_group0_isr, (void *)TIMER_0, ESP_INTR_FLAG_IRAM, NULL );
-  timer_start( TIMER_GROUP_0, TIMER_0 );
-
-  timer_init( TIMER_GROUP_0, TIMER_1, &timer_1_config );
-  timer_set_counter_value( TIMER_GROUP_0, TIMER_1, 0x00000000ULL );
-  timer_set_alarm_value( TIMER_GROUP_0, TIMER_1, TICKS_PER_AUDIO_OUT_SAMPLE );
-  timer_enable_intr( TIMER_GROUP_0, TIMER_1 );
-  timer_isr_register( TIMER_GROUP_0, TIMER_1, timer_group0_isr, (void *)TIMER_1, ESP_INTR_FLAG_IRAM, NULL );
-  timer_start( TIMER_GROUP_0, TIMER_1 );
-
-  interrupts();
+  return_code = esp_timer_create( &dac_timer_config, &dac_timer_handle );
+  ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then an error message is printed on the console, and abort() is called.
+  return_code = esp_timer_stop( dac_timer_handle );
+  ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then an error message is printed on the console, and abort() is called.
+  return_code = esp_timer_start_periodic( dac_timer_handle, u64_dac_timer_interval_us );
+  ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then an error message is printed on the console, and abort() is called.
 
 }
 
-
-
-void IRAM_ATTR ap_audio::timer_group0_handler( volatile int timer_number ) {
-
- timer_idx_t timer_no;
-
-  timer_spinlock_take( TIMER_GROUP_0 );
-  timer_no = ( timer_idx_t )timer_number; // Which timer triggered the interrupt?
-
-  if ( timer_no == TIMER_0 ) { // The interrupt was triggered by TIMER_0.  So, process the left and right ADCs.
-
-    ap_audio::procees_adc();
-
-  }
-
-  else { // The interrupt was triggered by TIMER_1.  So, process the DAC.
-
-    ap_audio::procees_dac();
-
-  }
-
-  timer_spinlock_give( TIMER_GROUP_0 );
-
-}
-
-
-
-void IRAM_ATTR ap_audio::procees_adc() {
+void IRAM_ATTR ap_audio::process_adc(void* arg) {
 
 esp_err_t return_code;
+audio_sample_t sample;
 
   // Read the left and right channel inputs.
   //
@@ -273,14 +242,11 @@ esp_err_t return_code;
   *_pi_audio_in_index = ( *_pi_audio_in_index < _i_audio_in_index_max ) ? *_pi_audio_in_index + 1 : *_pi_audio_in_index - _i_audio_in_index_max;
   *( _pxa_audio_samples + *_pi_audio_in_index ) = sample;
 
-  timer_group_enable_alarm_in_isr( TIMER_GROUP_0, TIMER_0 );
-  timer_group_clr_intr_status_in_isr( TIMER_GROUP_0, TIMER_0 );
-
 }
 
 
 
-void IRAM_ATTR ap_audio::procees_dac() {
+void IRAM_ATTR ap_audio::process_dac(void* arg) {
 
 esp_err_t return_code;
 uint16_t left_data;
@@ -309,17 +275,17 @@ uint16_t right_data;
 
   spi_transaction_t left_update = {
 
-      .length = 16,      // 16 bits
+      .length = 16,
       .tx_buffer = &left_data,
-      .rx_buffer = NULL  // We're not reading anything
+      .rx_buffer = NULL
 
   };
 
   spi_transaction_t right_update = {
 
-      .length = 16,      // 16 bits
+      .length = 16,
       .tx_buffer = &right_data,
-      .rx_buffer = NULL  // We're not reading anything
+      .rx_buffer = NULL
 
   };
 
@@ -329,10 +295,9 @@ uint16_t right_data;
   return_code = spi_device_transmit(dac_spi_handle, &right_update);
   ESP_ERROR_CHECK( return_code ); // If not ESP_OK, then an error message is printed on the console, and abort() is called.
 
-  timer_group_enable_alarm_in_isr( TIMER_GROUP_0, TIMER_1 );
-  timer_group_clr_intr_status_in_isr( TIMER_GROUP_0, TIMER_1 );
-
 }
+
+
 
 // Toggle the appropriate chip select pin.
 
