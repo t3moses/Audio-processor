@@ -8246,6 +8246,52 @@ Soure: &lt;a href="http://www.ti.com/lit/ds/symlink/ads7042.pdf"&gt; Data sheet 
 </package>
 </packages>
 </library>
+<library name="PJ-102AH">
+<packages>
+<package name="CUI_PJ-102AH">
+<text x="-7.198709375" y="6.13741875" size="1.271540625" layer="25">&gt;NAME</text>
+<text x="-7.1969" y="-6.41615" size="1.27121875" layer="27">&gt;VALUE</text>
+<wire x1="-6" y1="-0.8" x2="-7" y2="-0.8" width="0.0001" layer="46"/>
+<wire x1="-7" y1="-0.8" x2="-7" y2="0.8" width="0.0001" layer="46"/>
+<wire x1="-7" y1="0.8" x2="-6" y2="0.8" width="0.0001" layer="46"/>
+<wire x1="-6" y1="0.8" x2="-6" y2="-0.8" width="0.0001" layer="46"/>
+<wire x1="0" y1="-0.8" x2="-1" y2="-0.8" width="0.0001" layer="46"/>
+<wire x1="-1" y1="-0.8" x2="-1" y2="0.8" width="0.0001" layer="46"/>
+<wire x1="-1" y1="0.8" x2="0" y2="0.8" width="0.0001" layer="46"/>
+<wire x1="0" y1="0.8" x2="0" y2="-0.8" width="0.0001" layer="46"/>
+<wire x1="-4.3" y1="4.2" x2="-4.3" y2="5.2" width="0.0001" layer="46"/>
+<wire x1="-4.3" y1="5.2" x2="-2.7" y2="5.2" width="0.0001" layer="46"/>
+<wire x1="-2.7" y1="5.2" x2="-2.7" y2="4.2" width="0.0001" layer="46"/>
+<wire x1="-2.7" y1="4.2" x2="-4.3" y2="4.2" width="0.0001" layer="46"/>
+<wire x1="-7.2" y1="4.5" x2="7.2" y2="4.5" width="0.127" layer="51"/>
+<wire x1="7.2" y1="-4.5" x2="-7.2" y2="-4.5" width="0.127" layer="51"/>
+<wire x1="-7.2" y1="-4.5" x2="-7.2" y2="4.5" width="0.127" layer="51"/>
+<wire x1="7.2" y1="4.5" x2="7.2" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="7.2" y1="-4.5" x2="-7.2" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="-7.2" y1="4.5" x2="-5.35" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-7.2" y1="-4.5" x2="-7.2" y2="-1.55" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="4.5" x2="7.2" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-7.2" y1="1.45" x2="-7.2" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-7.45" y1="4.75" x2="-5.35" y2="4.75" width="0.05" layer="39"/>
+<wire x1="-5.35" y1="4.75" x2="-5.35" y2="5.8" width="0.05" layer="39"/>
+<wire x1="-5.35" y1="5.8" x2="-1.65" y2="5.8" width="0.05" layer="39"/>
+<wire x1="-1.65" y1="5.8" x2="-1.65" y2="4.75" width="0.05" layer="39"/>
+<wire x1="-1.65" y1="4.75" x2="7.5" y2="4.75" width="0.05" layer="39"/>
+<wire x1="7.5" y1="4.75" x2="7.5" y2="-4.75" width="0.05" layer="39"/>
+<wire x1="7.5" y1="-4.75" x2="-7.45" y2="-4.75" width="0.05" layer="39"/>
+<wire x1="-7.45" y1="-4.75" x2="-7.45" y2="-2.35" width="0.05" layer="39"/>
+<circle x="-8.1" y="0" radius="0.2" width="0.4" layer="21"/>
+<wire x1="-7.45" y1="2.25" x2="-7.45" y2="4.75" width="0.05" layer="39"/>
+<wire x1="-7.45" y1="2.25" x2="-7.55" y2="2.25" width="0.05" layer="39"/>
+<wire x1="-7.55" y1="2.25" x2="-7.55" y2="-2.35" width="0.05" layer="39"/>
+<wire x1="-7.55" y1="-2.35" x2="-7.45" y2="-2.35" width="0.05" layer="39"/>
+<wire x1="7.2" y1="4.5" x2="7.2" y2="-4.5" width="0.127" layer="51"/>
+<pad name="1" x="-6.5" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="2" x="-0.5" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="3" x="-3.5" y="4.7" drill="1" shape="long" rot="R180"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8720,6 +8766,18 @@ design rules under a new name.</description>
 <attribute name="NAME" x="-9.25" y="-17.1" size="1.27" layer="25" rot="R90"/>
 <attribute name="POPULARITY" value="0" x="-8" y="-15.1" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="-5.5" y="-17.1" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="J9" library="PJ-102AH" package="CUI_PJ-102AH" value="PJ-102AH" x="-2.55" y="-25.6" smashed="yes">
+<attribute name="AVAILABILITY" value="In Stock" x="-2.55" y="-25.6" size="1.778" layer="27" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/PJ-102AH/Same+Sky/view-part/?ref=eda" x="-2.55" y="-25.6" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="                                                      2.0 x 6.5 mm, 5.0 A, Horizontal, Through Hole, Tapered Pins, Dc Power Jack Connector                                              " x="-2.55" y="-25.6" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Same Sky" x="-2.55" y="-25.6" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="PJ-102AH" x="-2.55" y="-25.6" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-9.748709375" y="-19.46258125" size="1.271540625" layer="25"/>
+<attribute name="PACKAGE" value="None" x="-2.55" y="-25.6" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="None" x="-2.55" y="-25.6" size="1.778" layer="27" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/PJ-102AH/Same+Sky/view-part/?ref=snap" x="-2.55" y="-25.6" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-9.7469" y="-32.01615" size="1.27121875" layer="27"/>
 </element>
 </elements>
 <signals>

@@ -202,6 +202,7 @@ uint64_t u64_dac_timer_interval_us = 10 * 1000 * 1000 / AUDIO_OUT_SAMPLES_PER_SE
 
   const esp_timer_create_args_t dac_timer_config = {
     .callback = &ap_audio::process_dac,
+    .dispatch_method = ESP_TIMER_ISR,
     .name = "dac_timer",
   };
 

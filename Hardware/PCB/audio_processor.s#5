@@ -12951,6 +12951,24 @@ Soure: &lt;a href="http://www.ti.com/lit/ds/symlink/ads7042.pdf"&gt; Data sheet 
 <junction x="210.82" y="104.14"/>
 </segment>
 </net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="SDO"/>
+<wire x1="129.54" y1="152.4" x2="152.4" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="152.4" x2="152.4" y2="146.05" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="PA8_A4_D4_SDA"/>
+<wire x1="152.4" y1="146.05" x2="165.1" y2="146.05" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="SCLK"/>
+<wire x1="129.54" y1="149.86" x2="149.86" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="149.86" x2="149.86" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="PA9_A5_D5_SCL"/>
+<wire x1="149.86" y1="142.24" x2="165.1" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>

@@ -9191,6 +9191,11 @@ design rules under a new name.</description>
 <contactref element="U$2" pad="2"/>
 <wire x1="9.43" y1="47.935" x2="53.28" y2="56.07" width="0" layer="19" extent="1-1"/>
 </signal>
+<signal name="N$20">
+<contactref element="U$1" pad="5"/>
+<contactref element="U$2" pad="1"/>
+<wire x1="14.77" y1="45.395" x2="55.82" y2="56.07" width="0" layer="19" extent="1-1"/>
+</signal>
 </signals>
 <mfgpreviewcolors>
 <mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>

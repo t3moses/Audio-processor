@@ -14,12 +14,10 @@ Computation is performed by a Xiao SEEED dev-board with an Espressif ESP32C3 pro
 
 Software
 
-The software is based on Midifier C++ code.
-
-The only processing required initially is direct analog-in to analog-out through the processor.
+The only function required initially is direct analog-in to analog-out through the processor.
 
 Timers
 
-Use Timer Group 0 with Timer 0 to trigger analog-in and Timer 1 to trigger analog out.
+It uses the esp_timer library.  The file sdkconfig.h is included in order that timers can call interrupt handlers directly.
 
-Left and right ADCs are separate SPI devices, whereas the single dual DAC is one SPI device.
+Left and right ADCs are separate SPI devices, whereas the dual DAC is one SPI device.
